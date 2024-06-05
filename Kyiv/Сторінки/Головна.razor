@@ -7,7 +7,7 @@
 <h1>Hello, world!</h1>
 
 <EditForm EditContext="контекстРедагування" OnValidSubmit="Відправити" FormName="Головна">
-    <InputText @bind-Value="Model!.Command" />
+    <ВвідКоманди @bind-Value="Model!.Command" />
     <ValidationMessage For="() => Model!.Command" />
 </EditForm>
 
@@ -31,9 +31,9 @@
     {
         складПовідомлень?.Clear();
 
-        if (Model!.Command.Any(_ => _ < '0' || _ > '7'))
+        //if (Model!.Command.Any(_ => _ < '0' || _ > '7'))
         {
-            складПовідомлень?.Add(() => Model.Command, "Не 8-річне число.");
+            //складПовідомлень?.Add(() => Model.Command, "Не 8-річне число.");
         }
     }
 

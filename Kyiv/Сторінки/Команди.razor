@@ -1,0 +1,19 @@
+﻿@page "/commands"
+
+<НазваСторінки>Home</НазваСторінки>
+
+<InputText @bind-Value="Model!.Команда" />
+<pre>
+    @Model!.Команда
+</pre>
+
+@code {
+
+    [SupplyParameterFromForm]
+    public СтруктураКоманди? Model { get; set; } = new();
+
+    public class СтруктураКоманди
+    {
+        public string Команда { get; set; }
+    }
+}
