@@ -1,0 +1,67 @@
+﻿@page "/"
+@implements IDisposable
+@inject ILogger<Головна> Logger
+
+<НазваСторінки>Home</НазваСторінки>
+
+<h1>Hello, world!</h1>
+
+<EditForm EditContext="контекстРедагування" OnValidSubmit="Відправити" FormName="Головна">
+    <InputText @bind-Value="Model!.Command" />
+    <ValidationMessage For="() => Model!.Command" />
+</EditForm>
+
+@code {
+    private EditContext? контекстРедагування;
+
+    [SupplyParameterFromForm]
+    public СтруктураКоманди? Model { get; set; }
+
+    private ValidationMessageStore? складПовідомлень;
+
+    protected override void OnInitialized()
+    {
+        Model ??= new();
+        контекстРедагування = new(Model);
+        контекстРедагування.OnValidationRequested += ОбробитиВалідаціяЗапрошена;
+        складПовідомлень = new(контекстРедагування);
+    }
+
+    private void ОбробитиВалідаціяЗапрошена(object? відправник, ValidationRequestedEventArgs арги)
+    {
+        складПовідомлень?.Clear();
+
+        if (Model!.Command.Any(_ => _ < '0' || _ > '7'))
+        {
+            складПовідомлень?.Add(() => Model.Command, "Не 8-річне число.");
+        }
+    }
+
+    private void Відправити()
+    {
+        Logger.LogInformation("Submit called: Processing the form");
+    }
+
+    public class СтруктураКоманди
+    {
+        public bool Subsystem1 { get; set; }
+        public bool Subsystem2 { get; set; }
+        public bool Options => Subsystem1 || Subsystem2;
+
+        private string команда = "";
+
+        public string Command
+        {
+            get => команда;
+            set => команда = value;
+        }
+    }
+
+    public void Dispose()
+    {
+        if (контекстРедагування is not null)
+        {
+            контекстРедагування.OnValidationRequested -= ОбробитиВалідаціяЗапрошена;
+        }
+    }
+}

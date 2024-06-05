@@ -1,0 +1,12 @@
+﻿<Router AppAssembly="@typeof(Апка).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(ОсновнийМакет)" />
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        <PageTitle>Не знайдено</PageTitle>
+        <LayoutView Layout="@typeof(ОсновнийМакет)">
+            <p role="alert">Вибачте, за цією адресою нічого немає.</p>
+        </LayoutView>
+    </NotFound>
+</Router>
