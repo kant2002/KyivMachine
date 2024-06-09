@@ -1,19 +1,20 @@
 ﻿@page "/commands"
 
-<НазваСторінки>Home</НазваСторінки>
+<НазваСторінки>Дізасемблер</НазваСторінки>
 
-<InputText @bind-Value="Model!.Команда" />
+<h1>Дізасемблер</h1>
+
+<InputTextArea @bind-Value="Команда" rows="20" />
 <pre>
-    @Model!.Команда
+    @ДізасембльованаКоманда
 </pre>
 
 @code {
 
-    [SupplyParameterFromForm]
-    public СтруктураКоманди? Model { get; set; } = new();
+    public string Команда { get; set; } = "";
 
-    public class СтруктураКоманди
+    public string ДізасембльованаКоманда
     {
-        public string Команда { get; set; }
+        get => Дізасемблер.Дізасемблювати(Команда);
     }
 }
