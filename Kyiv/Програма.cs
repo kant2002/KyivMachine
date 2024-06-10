@@ -1,6 +1,4 @@
 using Kyiv;
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Мікрософт.АспНетЯдро.Компоненти.Веб;
 using Мікрософт.АспНетЯдро.Компоненти.ВебАсемблі.Хостінг;
 
