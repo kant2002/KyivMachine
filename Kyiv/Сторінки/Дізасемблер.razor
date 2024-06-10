@@ -4,17 +4,173 @@
 
 <h1>Дізасемблер</h1>
 
-<InputTextArea @bind-Value="Команда" rows="20" />
+<div class="row">
+    <div class="col">
+        <p>Введіть набір команд</p>
+        <InputTextArea @bind-Value="Команда" rows="20" />
+    </div>
+    <div class="col">
+        <p>Лістінг у псевдо-асемблері</p>
 <pre>
-    @ДізасембльованаКоманда
+@ДізасембльованаКоманда
 </pre>
+    </div>
+    <div class="col">
+        <InputSelect @bind-Value="Варіант">
+            <option value="">
+                Ручні адреси ...
+            </option>
+            <option checked="@(Варіант == "2to10")"
+                    value="2to10">
+                перевод из двоичной системы счисления в десятичную
+            </option>
+            <option checked="@(Варіант == "lnx")"
+                    value="lnx">
+                ln(x)
+            </option>
+            <option checked="@(Варіант == "cosX_v1")"
+                    value="cosX_v1">
+                1/2 * cosX (-1 &lt;x &lt; 1)
+            </option>
+            <option checked="@(Варіант == "sinX_v1")"
+                    value="sinX_v1">
+                1/2 * sinX (-1 &lt;x &lt; 1)
+            </option>
+            <option checked="@(Варіант == "sqrt")"
+                    value="sqrt">
+                sqrt(x)
+            </option>
+            <option checked="@(Варіант == "ex")"
+                    value="ex">
+                e(x)
+            </option>
+            <option checked="@(Варіант == "ex_2")"
+                    value="ex_2">
+                1/4 * e(x)
+            </option>
+            <option checked="@(Варіант == "cosX_v2")"
+                    value="cosX_v2">
+                1/2 * cosX (—2π &lt;x &lt; 2π)
+            </option>
+            <option checked="@(Варіант == "sinX_v2")"
+                    value="sinX_v2">
+                1/2 * sinX (-2π &lt;x &lt; 2π)
+            </option>
+            <option checked="@(Варіант == "arccosX_v1")"
+                    value="arccosX_v1">
+                1/π * arccos(X) (-1 &lt;x &lt; 1)
+            </option>
+            <option checked="@(Варіант == "arcsinX_v1")"
+                    value="arcsinX_v1">
+                1/π * arcsin(X) (-1 &lt;x &lt; 1)
+            </option>
+
+        </InputSelect>
+        <label>
+            Початкова адреса <small>(8-річне число)</small>
+            <InputNumber @bind-Value="ПочатковаАдреса" size="4" />
+        </label>
+        <label>
+            Кількість слів
+            <InputNumber @bind-Value="КількістьСлів" size="4" />
+        </label>
+
+        <button type="button" title="Завантажити програму із ПЗП" class="btn btn-primary" @onclick=Завантажити>Завантажити</button>
+    </div>
+</div>
 
 @code {
 
     public string Команда { get; set; } = "";
+    private string варіант = "";
+    public string Варіант
+    {
+        get => варіант;
+        set
+        {
+            варіант = value;
+            if (value == "2to10")
+            {
+                ПочатковаАдреса = 3100;
+                КількістьСлів = 9;
+            }
+            if (value == "lnx")
+            {
+                ПочатковаАдреса = 3112;
+                КількістьСлів = 29;
+            }
+            if (value == "cosX_v1")
+            {
+                ПочатковаАдреса = 3147;
+                КількістьСлів = 12;
+            }
+            if (value == "sinX_v1")
+            {
+                ПочатковаАдреса = 3152;
+                КількістьСлів = 9;
+            }
+            if (value == "sqrt")
+            {
+                ПочатковаАдреса = 3163;
+                КількістьСлів = 6;
+            }
+            if (value == "ex")
+            {
+                ПочатковаАдреса = 3202;
+                КількістьСлів = 13;
+            }
+            if (value == "ex_2")
+            {
+                ПочатковаАдреса = 3172;
+                КількістьСлів = 19;
+            }
+            if (value == "cosX_v2")
+            {
+                ПочатковаАдреса = 3217;
+                КількістьСлів = 19;
+            }
+            if (value == "sinX_v2")
+            {
+                ПочатковаАдреса = 3264;
+                КількістьСлів = 20;
+            }
+            if (value == "arccosX_v1")
+            {
+                ПочатковаАдреса = 3244;
+                КількістьСлів = 16;
+            }
+            if (value == "arcsinX_v1")
+            {
+                ПочатковаАдреса = 3242;
+                КількістьСлів = 17;
+            }
+
+            if (value != "")
+            {
+                Завантажити();
+            }
+        }
+    }
+    public int ПочатковаАдреса { get; set; } = 3100;
+    public int КількістьСлів { get; set; } = 9;
 
     public string ДізасембльованаКоманда
     {
-        get => global::Kyiv.Дізасемблер.Дізасемблювати(Команда);
+        get => ПочатковаАдреса + ":" + Environment.NewLine + global::Kyiv.Дізасемблер.Дізасемблювати(Команда);
     }
+
+    public void Завантажити()
+    {
+        МашинаКиїв машина = new();
+        List<string> лінії = new();
+        for (var i = 0; i < КількістьСлів;i++)
+        {
+            var команда = машина.ПрочитатиПамять(Із8РічноїАдреси(ПочатковаАдреса) + i);
+            лінії.Add(ПарсерКоманд.Сконвертувати(команда));
+        }
+
+        Команда = string.Join(Environment.NewLine, лінії);
+    }
+
+    private static int Із8РічноїАдреси(int ячейка) => (ячейка / 1000) * 8 * 8 * 8 + (ячейка % 1000 / 100) * 8 * 8 + (ячейка % 100 / 10) * 8 + ячейка % 10;
 }
