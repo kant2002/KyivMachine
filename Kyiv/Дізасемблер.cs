@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿using static Kyiv.Конвертер;
 
 namespace Kyiv;
 
@@ -112,6 +112,4 @@ public class Дізасемблер
 
         return До8РічноїАдреси(базоваАдреса).ToString();
     }
-
-    private static int До8РічноїАдреси(int ячейка) => (ячейка / (8 * 8 * 8)) * 1000 + (ячейка % (8 * 8 * 8) / (8 * 8)) * 100 + (ячейка % (8 * 8) / 8) * 10 + ячейка % 8;
 }

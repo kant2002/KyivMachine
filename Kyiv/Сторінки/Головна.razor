@@ -1,8 +1,10 @@
 ﻿@page "/"
+@using static Kyiv.Конвертер
 @implements IDisposable
 @inject ILogger<Головна> Logger
+@inject МашинаКиїв Machine
 
-<НазваСторінки>Home</НазваСторінки>
+<НазваСторінки>Головна</НазваСторінки>
 
 <NavLink class="nav-link" href="disassembler">
     <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Дізасемблер
@@ -13,6 +15,33 @@
     <ВвідКоманди @bind-Value="Model!.Command" />
     <ValidationMessage For="() => Model!.Command" />
 </EditForm> *@
+<h3>Регистри</h3>
+<label>C</label>
+@Machine.РегістрС
+<label>К</label>
+@Machine.РегістрК
+<label>Р</label>
+@Machine.РегістрР
+<label>Ц</label>
+@Machine.РегістрЦ
+<label>А</label>
+@Machine.РегістрА
+
+<div class="form-check">
+    <InputCheckbox @bind-Value="Machine.АварійнаЗупинка" id="АварійнаЗупинка" />
+    <label class="form-check-label" for="АварійнаЗупинка">
+        Аварійна зупинка
+    </label>
+</div>
+
+<div class="form-check">
+    <InputCheckbox @bind-Value="Machine.ТумблерБлокировкиАварийногоОстанова" id="ТумблерБлокировкиАварийногоОстанова" />
+    <label class="form-check-label" for="ТумблерБлокировкиАварийногоОстанова">
+        Блокировка аварийної зупинки
+    </label>
+</div>
+
+<button type="button" class="btn btn-primary" @onclick=Крок>Крок</button>
 
 @code {
     private EditContext? контекстРедагування;
@@ -43,6 +72,11 @@
     private void Відправити()
     {
         Logger.LogInformation("Submit called: Processing the form");
+    }
+
+    private void Крок()
+    {
+        Machine.ВиконатиКоманду();
     }
 
     public class СтруктураКоманди

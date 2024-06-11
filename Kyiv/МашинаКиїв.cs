@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using static Kyiv.Конвертер;
 
 namespace Kyiv;
 
@@ -429,6 +430,4 @@ public class МашинаКиїв
 
         return false;
     }
-
-    private static int Із8РічноїАдреси(int ячейка) => (ячейка / 1000) * 8 * 8 * 8 + (ячейка % 1000 / 100) * 8 * 8 + (ячейка % 100 / 10) * 8 + ячейка % 10;
 }
