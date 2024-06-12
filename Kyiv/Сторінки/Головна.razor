@@ -19,7 +19,7 @@
 <label>C</label>
 <ВвідРегістра @bind-Value="@Machine.РегістрС" />
 <label>К</label>
-@Machine.РегістрК
+@ПарсерКоманд.Сконвертувати(Machine.РегістрК)
 <label>Р</label>
 @Machine.РегістрР
 <label>Ц</label>
@@ -42,6 +42,7 @@
 </div>
 
 <button type="button" class="btn btn-primary" @onclick=Крок>Крок</button>
+<button type="button" class="btn btn-secondary" @onclick=ПротестуватиКорінь>sqrt(x)</button>
 
 @code {
     private EditContext? контекстРедагування;
@@ -77,6 +78,12 @@
     private void Крок()
     {
         Machine.ВиконатиКоманду();
+    }
+
+    private void ПротестуватиКорінь()
+    {
+        Machine.РегістрС = (ushort)Конвертер.Із8РічноїАдреси(3163);
+        Machine.Память[Конвертер.Із8РічноїАдреси(2)] = 1UL << 38 /* 2^(-2) */;
     }
 
     public class СтруктураКоманди
