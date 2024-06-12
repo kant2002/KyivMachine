@@ -1,0 +1,9 @@
+﻿@inject МашинаКиїв Машина
+
+<ВвідКоманди Value="@Машина.ПрочитатиПамять(Адреса)" ValueChanged=@((e) => Машина.ЗаписатиПамять(Адреса, e)) ValueExpression="() => Машина.Память[Адреса]" />
+<ValidationMessage For="() => Машина.Память[Адреса]" />
+
+@code {
+    [Parameter]
+    public int Адреса { get; set; }
+}

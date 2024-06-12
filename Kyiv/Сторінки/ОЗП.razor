@@ -1,6 +1,45 @@
 ﻿@page "/osd"
+@implements IDisposable
 @using static Kyiv.Конвертер
 @inject МашинаКиїв Машина
 <h3>Оперативний запапам'ятовуючий пристрій</h3>
 
-<ВідділПамяти БазоваАдреса="000" КількістьРядків="128" />
+<EditForm EditContext="контекстРедагування" OnValidSubmit="Відправити" FormName="Головна">
+    <РедакторВідділаПамяти БазоваАдреса="000" КількістьРядків="128" />
+</EditForm>
+
+@code {
+    private EditContext? контекстРедагування;
+
+    private ValidationMessageStore? складПовідомлень;
+
+    protected override void OnInitialized()
+    {
+        контекстРедагування = new(Машина);
+        контекстРедагування.OnValidationRequested += ОбробитиВалідаціяЗапрошена;
+        складПовідомлень = new(контекстРедагування);
+    }
+
+    private void ОбробитиВалідаціяЗапрошена(object? відправник, ValidationRequestedEventArgs арги)
+    {
+        складПовідомлень?.Clear();
+
+        //if (Model!.Command.Any(_ => _ < '0' || _ > '7'))
+        {
+            //складПовідомлень?.Add(() => Model.Command, "Не 8-річне число.");
+        }
+    }
+
+    private void Відправити()
+    {
+        //Logger.LogInformation("Submit called: Processing the form");
+    }
+
+    public void Dispose()
+    {
+        if (контекстРедагування is not null)
+        {
+            контекстРедагування.OnValidationRequested -= ОбробитиВалідаціяЗапрошена;
+        }
+    }
+}
