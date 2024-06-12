@@ -10,7 +10,7 @@ public class МашинаКиїв
     /// счетчик команд
     /// </summary>
     /// <remarks>11-бітний</remarks>
-    public ushort РегістрС;
+    public ushort РегістрС = 1;
 
     /// <summary>
     /// регистр команд

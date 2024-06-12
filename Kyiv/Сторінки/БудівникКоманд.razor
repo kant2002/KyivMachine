@@ -1,0 +1,162 @@
+﻿@page "/command-builder"
+<h3>Будівник команд</h3>
+
+<p>
+    Команди рахувальна машини "Київ" мають 4 блока
+</p>
+
+<p>
+    Код команди - 5 біт.
+</p>
+
+<p>
+    Адреса I - 11 біт, та 1 біт модифікації
+</p>
+
+<p>
+    Адреса II - 11 біт, та 1 біт модифікації
+</p>
+
+<p>
+    Адреса III - 11 біт, та 1 біт модифікації
+</p>
+
+<div class="row">
+    <div class="col">
+        <InputSelect class="form-select" @bind-Value="Код">
+            <option checked="@(Код == "00")"
+                    value="00">
+                00 - Пуста команда
+            </option>
+            <option checked="@(Код == "01")"
+                    value="01">
+                01 - Додавання
+            </option>
+            <option checked="@(Код == "02")"
+                    value="02">
+                02 - Віднімання
+            </option>
+            <option checked="@(Код == "03")"
+                    value="03">
+                03 - Додавання команд
+            </option>
+            <option checked="@(Код == "04")"
+                    value="04">
+                04 - Знакове порівняння
+            </option>
+            <option checked="@(Код == "05")"
+                    value="05">
+                05 - Беззнакове порівняння
+            </option>
+            <option checked="@(Код == "06")"
+                    value="06">
+                06 - Віднімання по модулю
+            </option>
+            <option checked="@(Код == "07")"
+                    value="07">
+                07 - Циклічне додавання
+            </option>
+            <option checked="@(Код == "10")"
+                    value="10">
+                10 - Множення без скруглення
+            </option>
+            <option checked="@(Код == "11")"
+                    value="11">
+                11 - Множення із скруглення
+            </option>
+            <option checked="@(Код == "12")"
+                    value="12">
+                12 - Ділення
+            </option>
+            <option checked="@(Код == "13")"
+                    value="13">
+                13 - Логічний сдвіг
+            </option>
+            <option checked="@(Код == "14")"
+                    value="14">
+                14 - Логічне додавання
+            </option>
+            <option checked="@(Код == "15")"
+                    value="15">
+                15 - Логічне множення
+            </option>
+            <option checked="@(Код == "16")"
+                    value="16">
+                16 - Точне порівняння
+            </option>
+            <option checked="@(Код == "17")"
+                    value="17">
+                17 - Рівнозначно
+            </option>
+            <option checked="@(Код == "20")"
+                    value="20">
+                20 - Введення чисел
+            </option>
+            <option checked="@(Код == "21")"
+                    value="21">
+                21 - Введення команд
+            </option>
+            <option checked="@(Код == "22")"
+                    value="22">
+                22 - Вивід кодов
+            </option>
+            <option checked="@(Код == "23")"
+                    value="23">
+                23 - Запис на магнітний барабан
+            </option>
+            <option checked="@(Код == "24")"
+                    value="24">
+                24 - Прочитати із магнітного барабана
+            </option>
+            <option checked="@(Код == "25")"
+                    value="25">
+                25 - Доступ до магнітного барабана
+            </option>
+            <option checked="@(Код == "26")"
+                    value="26">
+                26 - Початок групової операції
+            </option>
+            <option checked="@(Код == "27")"
+                    value="27">
+                27 - Кінець групової операції
+            </option>
+            <option checked="@(Код == "30")"
+                    value="30">
+                30 - Умовний перехід на підпрограму
+            </option>
+            <option checked="@(Код == "31")"
+                    value="31">
+                31 - Умовний перехід по знаку
+            </option>
+            <option checked="@(Код == "32")"
+                    value="32">
+                32 - Перехід по регістру повернення
+            </option>
+            <option checked="@(Код == "33")"
+                    value="33">
+                33 - Стій машина
+            </option>
+            <option checked="@(Код == "34")"
+                    value="34">
+                34 - Перехід по фіксатору
+            </option>
+            <option checked="@(Код == "35")"
+                    value="35">
+                35 - Нормалізація
+            </option>
+        </InputSelect>
+    </div>
+    <div class="col">
+
+    </div>
+    <div class="col">
+
+    </div>
+    <div class="col">
+
+    </div>
+</div>
+
+@code {
+    public string Код { get; set; } = "00";
+}
