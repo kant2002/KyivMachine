@@ -132,6 +132,98 @@ namespace Kyiv.Tests
             await this.ScenarioCleanupAsync();
         }
         
+        [Xunit.SkippableFactAttribute(DisplayName="Ділення на машинну одиницю")]
+        [Xunit.TraitAttribute("FeatureTitle", "Операція ділення")]
+        [Xunit.TraitAttribute("Description", "Ділення на машинну одиницю")]
+        public async System.Threading.Tasks.Task ДіленняНаМашиннуОдиницю()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Ділення на машинну одиницю", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 13
+  this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 14
+  await testRunner.GivenAsync("пам\'ять заповнена значенями 1", ((string)(null)), ((global::Reqnroll.Table)(null)), "Дано ");
+#line hidden
+#line 15
+  await testRunner.AndAsync("ячейка 5 містить команду \'17 7777 7777 7777\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+#line hidden
+#line 16
+  await testRunner.AndAsync("ячейка 18 містить команду \'17 7777 7777 7777\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
+#line hidden
+#line 17
+  await testRunner.AndAsync("ячейка 100 містить команду \'12 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+#line hidden
+#line 18
+  await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+#line hidden
+#line 19
+  await testRunner.WhenAsync("виконати команді", ((string)(null)), ((global::Reqnroll.Table)(null)), "Якщо ");
+#line hidden
+#line 20
+  await testRunner.ThenAsync("ячейка 2 містить команду \'17 7777 7777 7777\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
+#line hidden
+#line 21
+  await testRunner.AndAsync("лічільник команд містить 101", ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Ділення одинакових чисел")]
+        [Xunit.TraitAttribute("FeatureTitle", "Операція ділення")]
+        [Xunit.TraitAttribute("Description", "Ділення одинакових чисел")]
+        public async System.Threading.Tasks.Task ДіленняОдинаковихЧисел()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Ділення одинакових чисел", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 23
+  this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 24
+  await testRunner.GivenAsync("пам\'ять заповнена значенями 1", ((string)(null)), ((global::Reqnroll.Table)(null)), "Дано ");
+#line hidden
+#line 25
+  await testRunner.AndAsync("ячейка 5 містить команду \'17 2777 7777 7777\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+#line hidden
+#line 26
+  await testRunner.AndAsync("ячейка 18 містить команду \'17 2777 7777 7777\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
+#line hidden
+#line 27
+  await testRunner.AndAsync("ячейка 100 містить команду \'12 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+#line hidden
+#line 28
+  await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+#line hidden
+#line 29
+  await testRunner.WhenAsync("виконати команді", ((string)(null)), ((global::Reqnroll.Table)(null)), "Якщо ");
+#line hidden
+#line 30
+  await testRunner.ThenAsync("ячейка 2 містить команду \'17 7777 7777 7777\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
+#line hidden
+#line 31
+  await testRunner.AndAsync("лічільник команд містить 101", ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Reqnroll", "2.0.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : object, Xunit.IAsyncLifetime
