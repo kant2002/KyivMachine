@@ -27,4 +27,20 @@
     <ProjectReference Include="..\Kyiv\Kyiv.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Ділення.feature.cs">
+      <Visible>true</Visible>
+      <DependentUpon>Ділення.feature</DependentUpon>
+      <DesignTime>true</DesignTime>
+      <AutoGen>true</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ReqnrollFeatureFiles Update="Ділення.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </ReqnrollFeatureFiles>
+  </ItemGroup>
+
 </Project>
