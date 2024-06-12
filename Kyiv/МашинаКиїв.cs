@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Reflection.PortableExecutable;
 using static Kyiv.Конвертер;
 
 namespace Kyiv;
@@ -323,6 +324,7 @@ public class МашинаКиїв
 
     public void ВиконатиКоманду()
     {
+        РегістрК = Память[РегістрС];
         ВиконатиКоманду(ПарсерКоманд.Розібрати(РегістрК));
     }
 

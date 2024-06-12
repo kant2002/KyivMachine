@@ -17,7 +17,7 @@
 </EditForm> *@
 <h3>Регистри</h3>
 <label>C</label>
-@Machine.РегістрС
+<ВвідРегістра @bind-Value="@Machine.РегістрС" />
 <label>К</label>
 @Machine.РегістрК
 <label>Р</label>
@@ -25,7 +25,7 @@
 <label>Ц</label>
 @Machine.РегістрЦ
 <label>А</label>
-@Machine.РегістрА
+<ВвідРегістра @bind-Value="@Machine.РегістрА" />
 
 <div class="form-check">
     <InputCheckbox @bind-Value="Machine.АварійнаЗупинка" id="АварійнаЗупинка" />
