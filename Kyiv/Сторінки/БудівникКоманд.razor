@@ -147,16 +147,33 @@
         </InputSelect>
     </div>
     <div class="col">
-
+        <InputCheckbox class="form-check-input" @bind-Value="НепрямаАдресаціяАдреса1" />
+        <ВвідРегістра @bind-Value="@Адреса1" />
     </div>
     <div class="col">
-
+        <InputCheckbox class="form-check-input" @bind-Value="НепрямаАдресаціяАдреса2" />
+        <ВвідРегістра @bind-Value="@Адреса2" />
     </div>
     <div class="col">
-
+        <InputCheckbox class="form-check-input" @bind-Value="НепрямаАдресаціяАдреса3" />
+        <ВвідРегістра @bind-Value="@Адреса3" />
     </div>
 </div>
+<label>Команда</label>
+@Команда
 
 @code {
     public string Код { get; set; } = "00";
+    public bool НепрямаАдресаціяАдреса1 { get; set; }
+    public ushort Адреса1 { get; set; }
+    public bool НепрямаАдресаціяАдреса2 { get; set; }
+    public ushort Адреса2 { get; set; }
+    public bool НепрямаАдресаціяАдреса3 { get; set; }
+    public ushort Адреса3 { get; set; }
+    public string Команда => ПарсерКоманд.Сконвертувати(
+        ((ulong)Конвертер.Із8РічноїАдреси(int.Parse(Код)) << 36)
+        + ((ulong)((НепрямаАдресаціяАдреса1 ? 2048 : 0) + Адреса1) << 24)
+        + ((ulong)((НепрямаАдресаціяАдреса2 ? 2048 : 0) + Адреса2) << 12)
+        + ((ulong)((НепрямаАдресаціяАдреса3 ? 2048 : 0) + Адреса3) << 0)
+    );
 }

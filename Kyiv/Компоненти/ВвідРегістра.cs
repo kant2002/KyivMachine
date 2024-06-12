@@ -50,6 +50,6 @@ public class ВвідРегістра : InputBase<ushort>
     /// <inheritdoc />
     protected override string? FormatValueAsString(ushort value)
     {
-        return Конвертер.До8РічноїАдреси(value).ToString();
+        return ("000" + Конвертер.До8РічноїАдреси(value).ToString())[^4..^0];
     }
 }

@@ -26,7 +26,11 @@ public static class ПарсерКоманд
         var адреса1 = команда >> 24 & 0xFFF;
         var адреса2 = команда >> 12 & 0xFFF;
         var адреса3 = команда >> 0 & 0xFFF;
-        return $"{("0" + Convert.ToString((int)код, 8))[^2..^0],2} {("000" + Convert.ToString((int)адреса1, 8))[^4..^0],4} {("000" + Convert.ToString((int)адреса2, 8))[^4..^0],4} {("000" + Convert.ToString((int)адреса3, 8))[^4..^0],4}";
+        var кодСтроки = Convert.ToString((int)код, 8);
+        var адреса1Строки = Convert.ToString((int)адреса1, 8);
+        var адреса2Строки = Convert.ToString((int)адреса2, 8);
+        var адреса3Строки = Convert.ToString((int)адреса3, 8);
+        return $"{("0" + кодСтроки)[^2..^0],2} {("000" + адреса1Строки)[^4..^0],4} {("000" + адреса2Строки)[^4..^0],4} {("000" + адреса3Строки)[^4..^0],4}";
     }
 
     public static СтруктураКоманди Розібрати(ulong команда)
