@@ -178,14 +178,14 @@ namespace Kyiv.Tests
             await this.ScenarioCleanupAsync();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Ділення одинакових чисел")]
+        [Xunit.SkippableFactAttribute(DisplayName="Ділення однакових чисел")]
         [Xunit.TraitAttribute("FeatureTitle", "Операція ділення")]
-        [Xunit.TraitAttribute("Description", "Ділення одинакових чисел")]
-        public async System.Threading.Tasks.Task ДіленняОдинаковихЧисел()
+        [Xunit.TraitAttribute("Description", "Ділення однакових чисел")]
+        public async System.Threading.Tasks.Task ДіленняОднаковихЧисел()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Ділення одинакових чисел", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Ділення однакових чисел", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 23
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
