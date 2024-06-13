@@ -191,10 +191,11 @@ namespace Kyiv.Tests
         [Xunit.SkippableTheoryAttribute(DisplayName="Множення без скруглення")]
         [Xunit.TraitAttribute("FeatureTitle", "Аріфметичні операції")]
         [Xunit.TraitAttribute("Description", "Множення без скруглення")]
-        [Xunit.InlineDataAttribute("\'00 0001 0000 0000\'", "\'00 0000 0001 0000\'", "\'00 0000 0000 0001\'", new string[0])]
+        [Xunit.InlineDataAttribute("\'00 0001 0000 0000\'", "\'00 0000 0020 0000\'", "\'00 0000 0000 0001\'", new string[0])]
         [Xunit.InlineDataAttribute("\'10 0000 0000 0000\'", "\'10 0000 0000 0000\'", "\'04 0000 0000 0000\'", new string[0])]
         [Xunit.InlineDataAttribute("\'04 0000 0000 0000\'", "\'04 0000 0000 0000\'", "\'01 0000 0000 0000\'", new string[0])]
-        [Xunit.InlineDataAttribute("\'00 0000 0000 0012\'", "\'00 0000 0001 0013\'", "\'00 0000 0000 0001\'", new string[0])]
+        [Xunit.InlineDataAttribute("\'00 0000 0000 0012\'", "\'00 0000 0001 0013\'", "\'00 0000 0000 0000\'", new string[0])]
+        [Xunit.InlineDataAttribute("\'10 0000 0000 0000\'", "\'17 7777 7777 7777\'", "\'07 7777 7777 7777\'", new string[0])]
         public async System.Threading.Tasks.Task МноженняБезСкруглення(string множник1, string множник2, string добуток, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
@@ -255,7 +256,7 @@ namespace Kyiv.Tests
             argumentsOfScenario.Add("дільник", дільник);
             argumentsOfScenario.Add("частка", частка);
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Ділення", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 50
+#line 52
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -265,28 +266,28 @@ namespace Kyiv.Tests
             else
             {
                 await this.ScenarioStartAsync();
-#line 51
+#line 53
   await testRunner.GivenAsync("пам\'ять заповнена значенями 1", ((string)(null)), ((global::Reqnroll.Table)(null)), "Дано ");
 #line hidden
-#line 52
+#line 54
   await testRunner.AndAsync(string.Format("ячейка 5 містить команду {0}", ділене), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
-#line 53
+#line 55
   await testRunner.AndAsync(string.Format("ячейка 18 містить команду {0}", дільник), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
 #line hidden
-#line 54
+#line 56
   await testRunner.AndAsync("ячейка 100 містить команду \'12 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
-#line 55
+#line 57
   await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
-#line 56
+#line 58
   await testRunner.WhenAsync("виконати команді", ((string)(null)), ((global::Reqnroll.Table)(null)), "Якщо ");
 #line hidden
-#line 57
+#line 59
   await testRunner.ThenAsync(string.Format("ячейка 2 містить команду {0}", частка), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
 #line hidden
-#line 58
+#line 60
   await testRunner.AndAsync("лічільник команд містить 101", ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
 #line hidden
             }
