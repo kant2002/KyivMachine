@@ -56,6 +56,12 @@ public class КрокиМашини(IUnitTestRuntimeProvider unitTestRuntimeProv
         машина.РегістрК = машина.ПрочитатиПамять(машина.РегістрС);
     }
 
+    [Given("регістр повернення містить {int}")]
+    public void ПрипустимоРегістрПоверненняКомандМістить(int ячейка)
+    {
+        машина.РегістрР = (ushort)ячейка;
+    }
+
     [Given("аварійна зупинка включена")]
     public void ПрипустимоАварійнаЗупинкаВключена()
     {
@@ -79,6 +85,12 @@ public class КрокиМашини(IUnitTestRuntimeProvider unitTestRuntimeProv
     public void ТоЛічільникКомандМістить(int число)
     {
         Assert.Equal((ushort)число, машина.РегістрС);
+    }
+
+    [Then("регістр повернення містить {int}")]
+    public void ТоРегісітрПоверненняМістить(int число)
+    {
+        Assert.Equal((ushort)число, машина.РегістрР);
     }
 
     [Then("ячейка {int} містить команду {string}")]
