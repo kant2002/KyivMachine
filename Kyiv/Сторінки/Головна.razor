@@ -43,6 +43,7 @@
 
 <button type="button" class="btn btn-primary" @onclick=Крок>Крок</button>
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиКорінь>sqrt(x)</button>
+<button type="button" class="btn btn-secondary" @onclick=ПротестуватиКонвертацію>2 до 10</button>
 
 @code {
     private EditContext? контекстРедагування;
@@ -83,6 +84,12 @@
     private void ПротестуватиКорінь()
     {
         Machine.РегістрС = (ushort)Конвертер.Із8РічноїАдреси(3163);
+        Machine.Память[Конвертер.Із8РічноїАдреси(2)] = 1UL << 38 /* 2^(-2) */;
+    }
+
+    private void ПротестуватиКонвертацію()
+    {
+        Machine.РегістрС = (ushort)Конвертер.Із8РічноїАдреси(3100);
         Machine.Память[Конвертер.Із8РічноїАдреси(2)] = 1UL << 38 /* 2^(-2) */;
     }
 

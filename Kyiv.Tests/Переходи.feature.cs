@@ -233,6 +233,61 @@ this.ScenarioInitialize(scenarioInfo);
             await this.ScenarioCleanupAsync();
         }
         
+        [Xunit.SkippableTheoryAttribute(DisplayName="Кінець групової команди")]
+        [Xunit.TraitAttribute("FeatureTitle", "Порівняння")]
+        [Xunit.TraitAttribute("Description", "Кінець групової команди")]
+        [Xunit.InlineDataAttribute("\'27 0001 0022 0002\'", "6", "18", new string[0])]
+        [Xunit.InlineDataAttribute("\'27 0005 0022 0002\'", "10", "2", new string[0])]
+        [Xunit.InlineDataAttribute("\'27 4001 0022 0002\'", "6", "18", new string[0])]
+        public async System.Threading.Tasks.Task КінецьГруповоїКоманди(string значення1, string регістрМодіфікаціїАдреси, string лічільник, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("значення1", значення1);
+            argumentsOfScenario.Add("регістр модіфікації адреси", регістрМодіфікаціїАдреси);
+            argumentsOfScenario.Add("лічільник", лічільник);
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Кінець групової команди", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 44
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 45
+ await testRunner.GivenAsync("пам\'ять заповнена значенями 1", ((string)(null)), ((global::Reqnroll.Table)(null)), "Дано ");
+#line hidden
+#line 46
+ await testRunner.AndAsync("регістр циклу містить 10", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+#line hidden
+#line 47
+ await testRunner.AndAsync("регістр модифікації адрес містить 5", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+#line hidden
+#line 48
+ await testRunner.AndAsync(string.Format("ячейка 100 містить команду {0}", значення1), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+#line hidden
+#line 49
+ await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+#line hidden
+#line 50
+ await testRunner.WhenAsync("виконати команді", ((string)(null)), ((global::Reqnroll.Table)(null)), "Якщо ");
+#line hidden
+#line 51
+ await testRunner.ThenAsync(string.Format("лічільник команд містить {0}", лічільник), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
+#line hidden
+#line 52
+ await testRunner.AndAsync("регістр циклу містить 10", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+#line hidden
+#line 53
+ await testRunner.AndAsync(string.Format("регістр модифікації адрес містить {0}", регістрМодіфікаціїАдреси), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Reqnroll", "2.0.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : object, Xunit.IAsyncLifetime
