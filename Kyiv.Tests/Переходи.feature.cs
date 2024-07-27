@@ -102,7 +102,7 @@ namespace Kyiv.Tests
             argumentsOfScenario.Add("лічільник", лічільник);
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Порівняння без знака", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 3
- this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -112,25 +112,25 @@ namespace Kyiv.Tests
             {
                 await this.ScenarioStartAsync();
 #line 4
-  await testRunner.GivenAsync("пам\'ять заповнена значенями 1", ((string)(null)), ((global::Reqnroll.Table)(null)), "Дано ");
+ await testRunner.GivenAsync("пам\'ять заповнена значенями 1", ((string)(null)), ((global::Reqnroll.Table)(null)), "Дано ");
 #line hidden
 #line 5
-  await testRunner.AndAsync(string.Format("ячейка 5 містить команду {0}", значення1), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+ await testRunner.AndAsync(string.Format("ячейка 5 містить команду {0}", значення1), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 6
-  await testRunner.AndAsync(string.Format("ячейка 18 містить команду {0}", значення2), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
+ await testRunner.AndAsync(string.Format("ячейка 18 містить команду {0}", значення2), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
 #line hidden
 #line 7
-  await testRunner.AndAsync("ячейка 100 містить команду \'05 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+ await testRunner.AndAsync("ячейка 100 містить команду \'05 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 8
-  await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+ await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 9
-  await testRunner.WhenAsync("виконати команді", ((string)(null)), ((global::Reqnroll.Table)(null)), "Якщо ");
+ await testRunner.WhenAsync("виконати команді", ((string)(null)), ((global::Reqnroll.Table)(null)), "Якщо ");
 #line hidden
 #line 10
-  await testRunner.ThenAsync(string.Format("лічільник команд містить {0}", лічільник), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
+ await testRunner.ThenAsync(string.Format("лічільник команд містить {0}", лічільник), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();
@@ -155,28 +155,79 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 await this.ScenarioStartAsync();
 #line 20
-  await testRunner.GivenAsync("пам\'ять заповнена значенями 1", ((string)(null)), ((global::Reqnroll.Table)(null)), "Дано ");
+ await testRunner.GivenAsync("пам\'ять заповнена значенями 1", ((string)(null)), ((global::Reqnroll.Table)(null)), "Дано ");
 #line hidden
 #line 21
-  await testRunner.AndAsync("регістр повернення містить 18", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+ await testRunner.AndAsync("регістр повернення містить 18", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 22
-  await testRunner.AndAsync("ячейка 18 містить команду \'05 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
+ await testRunner.AndAsync("ячейка 18 містить команду \'05 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
 #line hidden
 #line 23
-  await testRunner.AndAsync("ячейка 100 містить команду \'32 0000 0000 0000\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+ await testRunner.AndAsync("ячейка 100 містить команду \'32 0000 0000 0000\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 24
-  await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+ await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 25
-  await testRunner.WhenAsync("виконати команді", ((string)(null)), ((global::Reqnroll.Table)(null)), "Якщо ");
+ await testRunner.WhenAsync("виконати команді", ((string)(null)), ((global::Reqnroll.Table)(null)), "Якщо ");
 #line hidden
 #line 26
-  await testRunner.ThenAsync("лічільник команд містить 18", ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
+ await testRunner.ThenAsync("лічільник команд містить 18", ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
 #line hidden
 #line 27
-  await testRunner.AndAsync("регістр повернення містить 0", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+ await testRunner.AndAsync("регістр повернення містить 0", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [Xunit.SkippableTheoryAttribute(DisplayName="Початок групової команди")]
+        [Xunit.TraitAttribute("FeatureTitle", "Порівняння")]
+        [Xunit.TraitAttribute("Description", "Початок групової команди")]
+        [Xunit.InlineDataAttribute("\'26 0005 0022 0002\'", "18", "101", new string[0])]
+        [Xunit.InlineDataAttribute("\'26 0005 0005 0002\'", "5", "2", new string[0])]
+        public async System.Threading.Tasks.Task ПочатокГруповоїКоманди(string значення1, string регістрМодіфікаціїАдреси, string лічільник, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("значення1", значення1);
+            argumentsOfScenario.Add("регістр модіфікації адреси", регістрМодіфікаціїАдреси);
+            argumentsOfScenario.Add("лічільник", лічільник);
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Початок групової команди", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 29
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 30
+ await testRunner.GivenAsync("пам\'ять заповнена значенями 1", ((string)(null)), ((global::Reqnroll.Table)(null)), "Дано ");
+#line hidden
+#line 31
+ await testRunner.AndAsync("ячейка 2 містить команду \'32 0015 0012 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
+#line hidden
+#line 32
+ await testRunner.AndAsync(string.Format("ячейка 100 містить команду {0}", значення1), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+#line hidden
+#line 33
+ await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+#line hidden
+#line 34
+ await testRunner.WhenAsync("виконати команді", ((string)(null)), ((global::Reqnroll.Table)(null)), "Якщо ");
+#line hidden
+#line 35
+ await testRunner.ThenAsync(string.Format("лічільник команд містить {0}", лічільник), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
+#line hidden
+#line 36
+ await testRunner.AndAsync("регістр циклу містить 5", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+#line hidden
+#line 37
+ await testRunner.AndAsync(string.Format("регістр модифікації адрес містить {0}", регістрМодіфікаціїАдреси), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();

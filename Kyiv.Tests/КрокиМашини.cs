@@ -93,6 +93,18 @@ public class КрокиМашини(IUnitTestRuntimeProvider unitTestRuntimeProv
         Assert.Equal((ushort)число, машина.РегістрР);
     }
 
+    [Then("регістр циклу містить {int}")]
+    public void ТоРегісітрЦиклуМістить(int число)
+    {
+        Assert.Equal((ushort)число, машина.РегістрЦ);
+    }
+
+    [Then("регістр модифікації адрес містить {int}")]
+    public void ТоРегісітрМодифікаціїАдресМістить(int число)
+    {
+        Assert.Equal((ushort)число, машина.РегістрА);
+    }
+
     [Then("ячейка {int} містить команду {string}")]
     public void ТоЯчейкаЗМіститьКоманду(int ячейка, string команда)
     {
