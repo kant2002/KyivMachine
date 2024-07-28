@@ -112,6 +112,7 @@
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиКорінь>sqrt(x)</button>
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиКонвертацію>2 до 10</button>
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиЕкспоненту>1/4 * e(x)</button>
+<button type="button" class="btn btn-secondary" @onclick=ПротестуватиСінусВ1>1/2 * sinX (-1 &lt;x &lt; 1)</button>
 
 @code {
     private EditContext? контекстРедагування;
@@ -164,6 +165,13 @@
     private void ПротестуватиЕкспоненту()
     {
         Machine.РегістрС = (ushort)Конвертер.Із8РічноїАдреси(3202);
+        Machine.АдресаПараметра = 0 /* 0 */;
+        Machine.АдресаПараметра = ПарсерКоманд.Сконвертувати("17 7777 7777 7777") /* 1 */;
+    }
+
+    private void ПротестуватиСінусВ1()
+    {
+        Machine.РегістрС = (ushort)Конвертер.Із8РічноїАдреси(3152);
         Machine.АдресаПараметра = 0 /* 0 */;
         Machine.АдресаПараметра = ПарсерКоманд.Сконвертувати("17 7777 7777 7777") /* 1 */;
     }
