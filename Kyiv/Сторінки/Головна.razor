@@ -18,14 +18,24 @@
 <h3>Регистри</h3>
 <label title="Регістр лікувальника команд">C</label>
 <ВвідРегістра @bind-Value="@Machine.РегістрС" />
-<label title="Регістр поточної команди">К</label>
-@ПарсерКоманд.Сконвертувати(Machine.РегістрК)
 <label title="Регістр повернення">Р</label>
 @Machine.РегістрР
 <label title="Регістр закінчення циклу">Ц</label>
 @Machine.РегістрЦ
 <label title="Регістр лікувальних циклу">А</label>
 <ВвідРегістра @bind-Value="@Machine.РегістрА" />
+
+<div class="row">
+    <div class="col">
+        <label title="Регістр поточної команди">К</label>
+        @ПарсерКоманд.Сконвертувати(Machine.РегістрК)
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        @((MarkupString)Kyiv.Дізасемблер.Дізасемблювати(ПарсерКоманд.Сконвертувати(Machine.РегістрК)))
+    </div>
+</div>
 
 <div class="form-check">
     <InputCheckbox @bind-Value="Machine.АварійнаЗупинка" id="АварійнаЗупинка" />
@@ -46,6 +56,9 @@
     <div class="col-1">
         <label>парам</label>
     </div>
+    <div class="col-2">
+        @Конвертер.ДоДвойноїТочності(Machine.АдресаПараметра)
+    </div>
     <div class="col">
         @ПарсерКоманд.Сконвертувати(Machine.АдресаПараметра)
     </div>
@@ -53,6 +66,9 @@
 <div class="row">
     <div class="col-1">
         <label>рез</label>
+    </div>
+    <div class="col-2">
+        @Конвертер.ДоДвойноїТочності(Machine.АдресаРезультата)
     </div>
     <div class="col">
         @ПарсерКоманд.Сконвертувати(Machine.АдресаРезультата)
@@ -62,6 +78,9 @@
     <div class="col-1">
         <label>тимч1</label>
     </div>
+    <div class="col-2">
+        @Конвертер.ДоДвойноїТочності(Machine.АдресаТимчасовоїЗмінної1)
+    </div>
     <div class="col">
         @ПарсерКоманд.Сконвертувати(Machine.АдресаТимчасовоїЗмінної1)
     </div>
@@ -69,6 +88,9 @@
 <div class="row">
     <div class="col-1">
         <label>тимч2</label>
+    </div>
+    <div class="col-2">
+        @Конвертер.ДоДвойноїТочності(Machine.АдресаТимчасовоїЗмінної2)
     </div>
     <div class="col">
         @ПарсерКоманд.Сконвертувати(Machine.АдресаТимчасовоїЗмінної2)
@@ -78,6 +100,9 @@
     <div class="col-1">
         <label>тимч3</label>
     </div>
+    <div class="col-2">
+        @Конвертер.ДоДвойноїТочності(Machine.АдресаТимчасовоїЗмінної3)
+    </div>
     <div class="col">
         @ПарсерКоманд.Сконвертувати(Machine.АдресаТимчасовоїЗмінної3)
     </div>
@@ -86,6 +111,7 @@
 <button type="button" class="btn btn-primary" @onclick=Крок>Крок</button>
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиКорінь>sqrt(x)</button>
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиКонвертацію>2 до 10</button>
+<button type="button" class="btn btn-secondary" @onclick=ПротестуватиЕкспоненту>1/4 * e(x)</button>
 
 @code {
     private EditContext? контекстРедагування;
@@ -133,6 +159,13 @@
     {
         Machine.РегістрС = (ushort)Конвертер.Із8РічноїАдреси(3100);
         Machine.АдресаПараметра = 1UL << 38 /* 2^(-2) */;
+    }
+
+    private void ПротестуватиЕкспоненту()
+    {
+        Machine.РегістрС = (ushort)Конвертер.Із8РічноїАдреси(3202);
+        Machine.АдресаПараметра = 0 /* 0 */;
+        Machine.АдресаПараметра = ПарсерКоманд.Сконвертувати("17 7777 7777 7777") /* 1 */;
     }
 
     public class СтруктураКоманди
