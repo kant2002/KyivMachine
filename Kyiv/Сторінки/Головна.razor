@@ -16,15 +16,15 @@
     <ValidationMessage For="() => Model!.Command" />
 </EditForm> *@
 <h3>Регистри</h3>
-<label>C</label>
+<label title="Регістр лікувальника команд">C</label>
 <ВвідРегістра @bind-Value="@Machine.РегістрС" />
-<label>К</label>
+<label title="Регістр поточної команди">К</label>
 @ПарсерКоманд.Сконвертувати(Machine.РегістрК)
-<label>Р</label>
+<label title="Регістр повернення">Р</label>
 @Machine.РегістрР
-<label>Ц</label>
+<label title="Регістр закінчення циклу">Ц</label>
 @Machine.РегістрЦ
-<label>А</label>
+<label title="Регістр лікувальних циклу">А</label>
 <ВвідРегістра @bind-Value="@Machine.РегістрА" />
 
 <div class="form-check">
@@ -39,6 +39,48 @@
     <label class="form-check-label" for="ТумблерБлокировкиАварийногоОстанова">
         Блокировка аварийної зупинки
     </label>
+</div>
+
+<h3>Відомі адреси</h3>
+<div class="row">
+    <div class="col-1">
+        <label>парам</label>
+    </div>
+    <div class="col">
+        @ПарсерКоманд.Сконвертувати(Machine.АдресаПараметра)
+    </div>
+</div>
+<div class="row">
+    <div class="col-1">
+        <label>рез</label>
+    </div>
+    <div class="col">
+        @ПарсерКоманд.Сконвертувати(Machine.АдресаРезультата)
+    </div>
+</div>
+<div class="row">
+    <div class="col-1">
+        <label>тимч1</label>
+    </div>
+    <div class="col">
+        @ПарсерКоманд.Сконвертувати(Machine.АдресаТимчасовоїЗмінної1)
+    </div>
+</div>
+<div class="row">
+    <div class="col-1">
+        <label>тимч2</label>
+    </div>
+    <div class="col">
+        @ПарсерКоманд.Сконвертувати(Machine.АдресаТимчасовоїЗмінної2)
+    </div>
+</div>
+<div class="row">
+    <div class="col-1">
+        <label>тимч3</label>
+    </div>
+    <div class="col">
+        @ПарсерКоманд.Сконвертувати(Machine.АдресаТимчасовоїЗмінної3)
+    </div>
 </div>
 
 <button type="button" class="btn btn-primary" @onclick=Крок>Крок</button>
@@ -84,13 +126,13 @@
     private void ПротестуватиКорінь()
     {
         Machine.РегістрС = (ushort)Конвертер.Із8РічноїАдреси(3163);
-        Machine.Память[Конвертер.Із8РічноїАдреси(2)] = 1UL << 38 /* 2^(-2) */;
+        Machine.АдресаПараметра = 1UL << 38 /* 2^(-2) */;
     }
 
     private void ПротестуватиКонвертацію()
     {
         Machine.РегістрС = (ushort)Конвертер.Із8РічноїАдреси(3100);
-        Machine.Память[Конвертер.Із8РічноїАдреси(2)] = 1UL << 38 /* 2^(-2) */;
+        Machine.АдресаПараметра = 1UL << 38 /* 2^(-2) */;
     }
 
     public class СтруктураКоманди
