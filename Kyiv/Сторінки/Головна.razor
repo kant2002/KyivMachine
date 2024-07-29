@@ -114,6 +114,11 @@
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиЕкспоненту>1/4 * e(x)</button>
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиСінусВ1>1/2 * sinX (-1 &lt;x &lt; 1)</button>
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиКосінусВ1>1/2 * cosX (-1 &lt;x &lt; 1)</button>
+<button type="button" class="btn btn-secondary" @onclick=ПротестуватиНатуральнийЛогарфім>ln(x)</button>
+<button type="button" class="btn btn-secondary" @onclick=ПротестуватиСінусВ2>1/2 * sinX (-2π &lt;x &lt; 2π)</button>
+<button type="button" class="btn btn-secondary" @onclick=ПротестуватиКосінусВ2>1/2 * cosX (-2π &lt;x &lt; 2π)</button>
+<button type="button" class="btn btn-secondary" @onclick=ПротестуватиАркСінус>1/π * arcsin(X) (-1 &lt;x &lt; 1)</button>
+<button type="button" class="btn btn-secondary" @onclick=ПротестуватиАркКосінус>1/π * arccos(X) (-1 &lt;x &lt; 1)</button>
 
 @code {
     private EditContext? контекстРедагування;
@@ -182,6 +187,42 @@
         Machine.ВстановитиЛічильник(Конвертер.Із8РічноїАдреси(3147));
         Machine.АдресаПараметра = 0 /* 0 */;
         Machine.АдресаПараметра = ПарсерКоманд.Сконвертувати("17 7777 7777 7777") /* 1 */;
+    }
+
+    private void ПротестуватиСінусВ2()
+    {
+        Machine.ВстановитиЛічильник(Конвертер.Із8РічноїАдреси(3264));
+        Machine.АдресаПараметра = 0 /* 0 */;
+        //Machine.АдресаПараметра = ПарсерКоманд.Сконвертувати("17 7777 7777 7777") /* 1 */;
+    }
+
+    private void ПротестуватиКосінусВ2()
+    {
+        Machine.ВстановитиЛічильник(Конвертер.Із8РічноїАдреси(3217));
+        Machine.АдресаПараметра = 0 /* 0 */;
+        //Machine.АдресаПараметра = ПарсерКоманд.Сконвертувати("17 7777 7777 7777") /* 1 */;
+    }
+
+    private void ПротестуватиНатуральнийЛогарфім()
+    {
+        Machine.ВстановитиЛічильник(Конвертер.Із8РічноїАдреси(3112));
+        //Machine.АдресаПараметра = 0 /* 0 */;
+        Machine.АдресаПараметра = ПарсерКоманд.Сконвертувати("05 7055 2615 4264") /* 1/e */;
+        //Machine.АдресаПараметра = ПарсерКоманд.Сконвертувати("17 7777 7777 7777") /* 1 */;
+    }
+
+    private void ПротестуватиАркСінус()
+    {
+        Machine.ВстановитиЛічильник(Конвертер.Із8РічноїАдреси(3242));
+        Machine.АдресаПараметра = 0 /* 0 */;
+        //Machine.АдресаПараметра = ПарсерКоманд.Сконвертувати("17 7777 7777 7777") /* 1 */;
+    }
+
+    private void ПротестуватиАркКосінус()
+    {
+        Machine.ВстановитиЛічильник(Конвертер.Із8РічноїАдреси(3244));
+        Machine.АдресаПараметра = 0 /* 0 */;
+        //Machine.АдресаПараметра = ПарсерКоманд.Сконвертувати("17 7777 7777 7777") /* 1 */;
     }
 
     public class СтруктураКоманди
