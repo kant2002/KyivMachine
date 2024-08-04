@@ -18,9 +18,9 @@ public class Дізасемблер
             {
                 try
                 {
-                    var частини = лінія.Split(' ', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries);
+                    var частини = лінія.Split([' ', '\t'], StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries);
                     var однаКоманда = частини.Count() >= 5
-                        ? лінія.Split(' ', 2, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)[1]
+                        ? лінія.Split([' ', '\t'], 2, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)[1]
                         : лінія;
                     команди.Add(ДоАссемблера(ПарсерКоманд.Розібрати(однаКоманда), true));
                 }
