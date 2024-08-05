@@ -238,14 +238,10 @@
     public async Task ЗавантажитиПідпрограму(string назва)
     {
         var файл = $"Підпрограми/{назва}.txt";
-        Console.WriteLine(файл);
         var лініїФайлу = (await httpClient.GetStringAsync(файл)).ReplaceLineEndings().Split(Environment.NewLine);
-        Console.WriteLine($"Файл {файл} завантажено");
         var лістінг = ПарсерЛістінга.ПрочитатиІзЛіній(лініїФайлу);
-        Console.WriteLine($"Файл {файл} завантажено");
         var одиницяКоду = лістінг.ОдиниціКоду[0];
         ПочатковаАдреса = одиницяКоду.ПочатковаАдреса;
-        Console.WriteLine($"Початкова адреса {одиницяКоду.ПочатковаАдреса}");
         List<string> лінії = new();
         for (var i = 0; i < одиницяКоду.Команди.Count; i++)
         {
@@ -263,7 +259,6 @@
         }
 
         Команда = string.Join(Environment.NewLine, лінії);
-        Console.WriteLine($"Файл {Команда} завантажено");
         StateHasChanged();
     }
 }
