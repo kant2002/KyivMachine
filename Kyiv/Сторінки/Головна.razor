@@ -120,6 +120,10 @@
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиАркСінус>1/π * arcsin(X) (-1 &lt;x &lt; 1)</button>
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиАркКосінус>1/π * arccos(X) (-1 &lt;x &lt; 1)</button>
 
+<pre>
+@string.Join(Environment.NewLine, Machine.НадрукованіРядки)
+</pre>
+
 @code {
     private EditContext? контекстРедагування;
 
