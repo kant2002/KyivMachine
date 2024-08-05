@@ -39,14 +39,14 @@
 
 <div class="form-check">
     <InputCheckbox @bind-Value="Machine.АварійнаЗупинка" id="АварійнаЗупинка" />
-    <label class="form-check-label" for="АварійнаЗупинка">
+    <label class="form-check-label" for="АварійнаЗупинка" title="Включає аварійну зупинку при переповненні у аріфметичних операціях">
         Аварійна зупинка
     </label>
 </div>
 
 <div class="form-check">
     <InputCheckbox @bind-Value="Machine.ТумблерБлокировкиАварийногоОстанова" id="ТумблерБлокировкиАварийногоОстанова" />
-    <label class="form-check-label" for="ТумблерБлокировкиАварийногоОстанова">
+    <label class="form-check-label" for="ТумблерБлокировкиАварийногоОстанова" title="Блокує аварійну зупинку при переповненні у аріфметичних операціях">
         Блокировка аварийної зупинки
     </label>
 </div>
@@ -109,6 +109,9 @@
 </div>
 
 <button type="button" class="btn btn-primary" @onclick=Крок>Крок</button>
+
+<h3>Підгрузка зашитих підпрограм</h3>
+<p>Натисність на кнопку щоб змінити поточну команду на старт підпрограми, вшитої у ПЗП. Ви можете натискати кнопку Крок для покрокової відладки</p>
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиКорінь>sqrt(x)</button>
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиКонвертацію>2 до 10</button>
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиЕкспоненту>1/4 * e(x)</button>
@@ -120,6 +123,7 @@
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиАркСінус>1/π * arcsin(X) (-1 &lt;x &lt; 1)</button>
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиАркКосінус>1/π * arccos(X) (-1 &lt;x &lt; 1)</button>
 
+<h3>Вивід прінтера</h3>
 <pre>
 @string.Join(Environment.NewLine, Machine.НадрукованіРядки)
 </pre>
