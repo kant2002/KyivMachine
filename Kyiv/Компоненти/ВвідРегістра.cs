@@ -42,7 +42,7 @@ public class ВвідРегістра : InputBase<ushort>
     protected override bool TryParseValueFromString(string? value, out ushort result, [NotNullWhen(false)] out string? validationErrorMessage)
     {
         var invalid = value is not null && value.Any(_ => (_ < '0' || _ > '7') && _ != ' ');
-        result = invalid ? (ushort)0 : (ushort)Конвертер.Із8РічноїАдреси(int.Parse(value));
+        result = invalid || value is null ? (ushort)0 : (ushort)Конвертер.Із8РічноїАдреси(int.Parse(value));
         validationErrorMessage = invalid ? "Не 8-річне число." : null;
         return !invalid;
     }
