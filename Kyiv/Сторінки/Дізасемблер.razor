@@ -9,6 +9,7 @@
 
 <div class="row">
     <div class="col">
+        <h3>Код</h3>
         <p>Введіть набір команд</p>
         <InputTextArea @bind-Value="Команда" rows="20" cols="26" style="font-family: monospace;" />
         <h4>Приклад</h4>
@@ -22,13 +23,8 @@
    7 02 0002 0004 0002
 </code></pre>
     </div>
-    <div class="col">
-        <p>Лістінг у псевдо-асемблері</p>
-<div style="white-space: pre">
-@((MarkupString)ДізасембльованаКоманда)
-</div>
-    </div>
-    <div class="col">
+    <div class="col order-md-5">
+        <h3>Підпрограми</h3>
         <label>
             Вбудована підпрограма із незмінної пам'яти
         </label>
@@ -38,7 +34,7 @@
             </option>
             <option checked="@(Варіант == "2to10")"
                     value="2to10">
-                перевод из двоичной системы счисления в десятичную
+                из двоичной системы в десятичную
             </option>
             <option checked="@(Варіант == "lnx")"
                     value="lnx">
@@ -125,6 +121,12 @@
 
         <button type="button" title="Завантажити програму із ПЗП" class="btn btn-primary" @onclick=Завантажити>Завантажити</button>
         <p>Виберіть із одного із випадаючих списків підпрограму для дізасемблінгу.</p>
+    </div>
+    <div class="col order-md-1">
+        <h3>Лістінг у псевдо-асемблері</h3>
+<div style="white-space: pre">
+            @((MarkupString)ДізасембльованаКоманда)
+</div>
     </div>
 </div>
 
