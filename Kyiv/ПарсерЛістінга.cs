@@ -54,7 +54,7 @@ public static class ПарсерЛістінга
                         останняАдреса = (останняАдреса & ~7) + Із8РічноїАдреси(частинаАдреси);
                     }
 
-                    одиницяКоду.Команди.Add(ПарсерКоманд.Сконвертувати(лінія.Split(' ', 2)[1]));
+                    одиницяКоду.Команди.Add(ПарсерКоманд.Сконвертувати(лінія.Split(' ', 2, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)[1]));
                 }
                 else if (частини.Length == 4)
                 {
