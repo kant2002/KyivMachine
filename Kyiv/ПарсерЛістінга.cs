@@ -9,6 +9,11 @@ public static class ПарсерЛістінга
         var лінії = Файл.ПрочитатиУсіЛінії(файл);
         return ПрочитатиІзЛіній(лінії);
     }
+    public static Лістінг ПрочитатиІзРядка(string рядок)
+    {
+        var лінії = рядок.ReplaceLineEndings().Split(Environment.NewLine);
+        return ПрочитатиІзЛіній(лінії);
+    }
 
     public static Лістінг ПрочитатиІзЛіній(string[] лінії)
     {

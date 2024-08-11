@@ -6,30 +6,24 @@ public class Дізасемблер
 {
     public static string Дізасемблювати(string команда)
     {
-        var лінії = команда.ReplaceLineEndings().Split(Environment.NewLine);
+        var лістінг = ПарсерЛістінга.ПрочитатиІзРядка(команда);
+        return Дізасемблювати(лістінг);
+    }
+
+    public static string Дізасемблювати(Лістінг лістінг)
+    {
         List<string> команди = new List<string>();
-        foreach (var лінія in лінії)
+        foreach (var лінія in лістінг.ОдиниціКоду.SelectMany(ок => ок.Команди))
         {
-            if (string.IsNullOrWhiteSpace(лінія))
+            try
             {
-                команди.Add(лінія);
+                команди.Add(ДоАссемблера(ПарсерКоманд.Розібрати(лінія), true));
             }
-            else
+            catch
             {
-                try
-                {
-                    var частини = лінія.Split([' ', '\t'], StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries);
-                    var однаКоманда = частини.Count() >= 5
-                        ? лінія.Split([' ', '\t'], 2, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)[1]
-                        : лінія;
-                    команди.Add(ДоАссемблера(ПарсерКоманд.Розібрати(однаКоманда), true));
-                }
-                catch
-                {
-                    команди.Add("// Невідома команда " + лінія);
-                }
+                команди.Add("// Невідома команда " + ПарсерКоманд.Сконвертувати(лінія));
             }
-        }    
+        }
 
         return string.Join(Environment.NewLine, команди);
     }
