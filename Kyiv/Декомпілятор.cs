@@ -64,7 +64,9 @@ public class Декомпілятор
             {
                 var мітка = точкиПереходу.Contains(адреса) ? new string[] { $"lbl_{До8РічноїАдреси(адреса)}:" } : [];
                 команди.AddRange(мітка.Union(
-                    ДоАссемблера(ПарсерКоманд.Розібрати(лінія), true).Select(ДоРядка)));
+                    ДоАссемблера(ПарсерКоманд.Розібрати(лінія), true)
+                        .Select(ВставитиЗмінні)
+                        .Select(ДоРядка)));
             }
             catch
             {
@@ -73,6 +75,10 @@ public class Декомпілятор
         }
 
         return string.Join(Environment.NewLine, команди);
+    }
+    private static Операція ВставитиЗмінні(Операція операція)
+    {
+        return операція;
     }
     private static string ДоРядка(Операція операція)
     {
