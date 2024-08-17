@@ -286,163 +286,163 @@ namespace Система.Лінкью
             => Enumerable.OrderByDescending(source, keySelector);
         public static IOrderedEnumerable<TSource> ВпорядкуватиПоСпаданню<TSource, TKey>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector, IComparer<TKey>? comparer)
             => Enumerable.OrderByDescending(source, keySelector, comparer);
-        public static IOrderedEnumerable<T> OrderDescending<T>(this IEnumerable<T> source, IComparer<T>? comparer)
+        public static IOrderedEnumerable<T> ВпорядкуватиСпадаючи<T>(this IEnumerable<T> source, IComparer<T>? comparer)
             => Enumerable.OrderDescending(source, comparer);
-        public static IOrderedEnumerable<T> OrderDescending<T>(this IEnumerable<T> source)
+        public static IOrderedEnumerable<T> ВпорядкуватиСпадаючи<T>(this IEnumerable<T> source)
             => Enumerable.OrderDescending(source);
-        public static IEnumerable<TSource> Prepend<TSource>(this IEnumerable<TSource> source, TSource element)
+        public static IEnumerable<TSource> ВПочаток<TSource>(this IEnumerable<TSource> source, TSource element)
             => Enumerable.Prepend(source, element);
-        public static IEnumerable<int> Range(int start, int count)
+        public static IEnumerable<int> Діапазон(int start, int count)
             => Enumerable.Range(start, count);
-        public static IEnumerable<TResult> Repeat<TResult>(TResult element, int count)
+        public static IEnumerable<TResult> Повторити<TResult>(TResult element, int count)
             => Enumerable.Repeat(element, count);
-        public static IEnumerable<TSource> Reverse<TSource>(this IEnumerable<TSource> source)
+        public static IEnumerable<TSource> Розвернути<TSource>(this IEnumerable<TSource> source)
             => Enumerable.Reverse(source);
-        public static IEnumerable<TResult> Select<TSource, TResult>(this IEnumerable<TSource> source, Func<TSource, int, TResult> selector)
+        public static IEnumerable<TResult> Вибрати<TSource, TResult>(this IEnumerable<TSource> source, Func<TSource, int, TResult> selector)
             => Enumerable.Select(source, selector);
-        public static IEnumerable<TResult> Select<TSource, TResult>(this IEnumerable<TSource> source, Func<TSource, TResult> selector)
+        public static IEnumerable<TResult> Вибрати<TSource, TResult>(this IEnumerable<TSource> source, Func<TSource, TResult> selector)
             => Enumerable.Select(source, selector);
-        public static IEnumerable<TResult> SelectMany<TSource, TCollection, TResult>(this IEnumerable<TSource> source, Func<TSource, int, IEnumerable<TCollection>> collectionSelector, Func<TSource, TCollection, TResult> resultSelector)
+        public static IEnumerable<TResult> ВибратиБагато<TSource, TCollection, TResult>(this IEnumerable<TSource> source, Func<TSource, int, IEnumerable<TCollection>> collectionSelector, Func<TSource, TCollection, TResult> resultSelector)
             => Enumerable.SelectMany(source, collectionSelector, resultSelector);
-        public static IEnumerable<TResult> SelectMany<TSource, TResult>(this IEnumerable<TSource> source, Func<TSource, int, IEnumerable<TResult>> selector)
+        public static IEnumerable<TResult> ВибратиБагато<TSource, TResult>(this IEnumerable<TSource> source, Func<TSource, int, IEnumerable<TResult>> selector)
             => Enumerable.SelectMany(source, selector);
-        public static IEnumerable<TResult> SelectMany<TSource, TResult>(this IEnumerable<TSource> source, Func<TSource, IEnumerable<TResult>> selector)
+        public static IEnumerable<TResult> ВибратиБагато<TSource, TResult>(this IEnumerable<TSource> source, Func<TSource, IEnumerable<TResult>> selector)
             => Enumerable.SelectMany(source, selector);
-        public static IEnumerable<TResult> SelectMany<TSource, TCollection, TResult>(this IEnumerable<TSource> source, Func<TSource, IEnumerable<TCollection>> collectionSelector, Func<TSource, TCollection, TResult> resultSelector)
+        public static IEnumerable<TResult> ВибратиБагато<TSource, TCollection, TResult>(this IEnumerable<TSource> source, Func<TSource, IEnumerable<TCollection>> collectionSelector, Func<TSource, TCollection, TResult> resultSelector)
             => Enumerable.SelectMany(source, collectionSelector, resultSelector);
-        public static bool SequenceEqual<TSource>(this IEnumerable<TSource> first, IEnumerable<TSource> second)
+        public static bool ПослідовнеДорівнює<TSource>(this IEnumerable<TSource> first, IEnumerable<TSource> second)
             => Enumerable.SequenceEqual(first, second);
-        public static bool SequenceEqual<TSource>(this IEnumerable<TSource> first, IEnumerable<TSource> second, IEqualityComparer<TSource>? comparer)
+        public static bool ПослідовнеДорівнює<TSource>(this IEnumerable<TSource> first, IEnumerable<TSource> second, IEqualityComparer<TSource>? comparer)
             => Enumerable.SequenceEqual(first, second, comparer);
-        public static TSource Single<TSource>(this IEnumerable<TSource> source)
+        public static TSource Один<TSource>(this IEnumerable<TSource> source)
             => Enumerable.Single(source);
-        public static TSource Single<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+        public static TSource Один<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
             => Enumerable.Single(source, predicate);
-        public static TSource? SingleOrDefault<TSource>(this IEnumerable<TSource> source)
+        public static TSource? ОдинАбоЗаЗамовчанням<TSource>(this IEnumerable<TSource> source)
             => Enumerable.SingleOrDefault(source);
-        public static TSource SingleOrDefault<TSource>(this IEnumerable<TSource> source, TSource defaultValue)
+        public static TSource ОдинАбоЗаЗамовчанням<TSource>(this IEnumerable<TSource> source, TSource defaultValue)
             => Enumerable.SingleOrDefault(source, defaultValue);
-        public static TSource? SingleOrDefault<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+        public static TSource? ОдинАбоЗаЗамовчанням<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
             => Enumerable.SingleOrDefault(source, predicate);
-        public static TSource SingleOrDefault<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate, TSource defaultValue)
+        public static TSource ОдинАбоЗаЗамовчанням<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate, TSource defaultValue)
             => Enumerable.SingleOrDefault(source, predicate, defaultValue);
-        public static IEnumerable<TSource> Skip<TSource>(this IEnumerable<TSource> source, int count)
+        public static IEnumerable<TSource> Пропустити<TSource>(this IEnumerable<TSource> source, int count)
             => Enumerable.Skip(source, count);
-        public static IEnumerable<TSource> SkipLast<TSource>(this IEnumerable<TSource> source, int count)
+        public static IEnumerable<TSource> ПропуститиЗКінця<TSource>(this IEnumerable<TSource> source, int count)
             => Enumerable.SkipLast(source, count);
-        public static IEnumerable<TSource> SkipWhile<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+        public static IEnumerable<TSource> ПропуститиПоки<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
             => Enumerable.SkipWhile(source, predicate);
-        public static IEnumerable<TSource> SkipWhile<TSource>(this IEnumerable<TSource> source, Func<TSource, int, bool> predicate)
+        public static IEnumerable<TSource> ПропуститиПоки<TSource>(this IEnumerable<TSource> source, Func<TSource, int, bool> predicate)
             => Enumerable.SkipWhile(source, predicate);
-        public static float Sum<TSource>(this IEnumerable<TSource> source, Func<TSource, float> selector)
+        public static float Сума<TSource>(this IEnumerable<TSource> source, Func<TSource, float> selector)
             => Enumerable.Sum(source, selector);
-        public static int Sum<TSource>(this IEnumerable<TSource> source, Func<TSource, int> selector)
+        public static int Сума<TSource>(this IEnumerable<TSource> source, Func<TSource, int> selector)
             => Enumerable.Sum(source, selector);
-        public static long Sum<TSource>(this IEnumerable<TSource> source, Func<TSource, long> selector)
+        public static long Сума<TSource>(this IEnumerable<TSource> source, Func<TSource, long> selector)
             => Enumerable.Sum(source, selector);
-        public static decimal? Sum<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal?> selector)
+        public static decimal? Сума<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal?> selector)
             => Enumerable.Sum(source, selector);
-        public static double Sum<TSource>(this IEnumerable<TSource> source, Func<TSource, double> selector)
+        public static double Сума<TSource>(this IEnumerable<TSource> source, Func<TSource, double> selector)
             => Enumerable.Sum(source, selector);
-        public static int? Sum<TSource>(this IEnumerable<TSource> source, Func<TSource, int?> selector)
+        public static int? Сума<TSource>(this IEnumerable<TSource> source, Func<TSource, int?> selector)
             => Enumerable.Sum(source, selector);
-        public static long? Sum<TSource>(this IEnumerable<TSource> source, Func<TSource, long?> selector)
+        public static long? Сума<TSource>(this IEnumerable<TSource> source, Func<TSource, long?> selector)
             => Enumerable.Sum(source, selector);
-        public static float? Sum<TSource>(this IEnumerable<TSource> source, Func<TSource, float?> selector)
+        public static float? Сума<TSource>(this IEnumerable<TSource> source, Func<TSource, float?> selector)
             => Enumerable.Sum(source, selector);
-        public static double? Sum<TSource>(this IEnumerable<TSource> source, Func<TSource, double?> selector)
+        public static double? Сума<TSource>(this IEnumerable<TSource> source, Func<TSource, double?> selector)
             => Enumerable.Sum(source, selector);
-        public static decimal Sum<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal> selector)
+        public static decimal Сума<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal> selector)
             => Enumerable.Sum(source, selector);
-        public static double? Sum(this IEnumerable<double?> source)
+        public static double? Сума(this IEnumerable<double?> source)
             => Enumerable.Sum(source);
-        public static float? Sum(this IEnumerable<float?> source)
+        public static float? Сума(this IEnumerable<float?> source)
             => Enumerable.Sum(source);
-        public static long? Sum(this IEnumerable<long?> source)
+        public static long? Сума(this IEnumerable<long?> source)
             => Enumerable.Sum(source);
-        public static int? Sum(this IEnumerable<int?> source)
+        public static int? Сума(this IEnumerable<int?> source)
             => Enumerable.Sum(source);
-        public static decimal? Sum(this IEnumerable<decimal?> source)
+        public static decimal? Сума(this IEnumerable<decimal?> source)
             => Enumerable.Sum(source);
-        public static long Sum(this IEnumerable<long> source)
+        public static long Сума(this IEnumerable<long> source)
             => Enumerable.Sum(source);
-        public static int Sum(this IEnumerable<int> source)
+        public static int Сума(this IEnumerable<int> source)
             => Enumerable.Sum(source);
-        public static double Sum(this IEnumerable<double> source)
+        public static double Сума(this IEnumerable<double> source)
             => Enumerable.Sum(source);
-        public static decimal Sum(this IEnumerable<decimal> source)
+        public static decimal Сума(this IEnumerable<decimal> source)
             => Enumerable.Sum(source);
-        public static float Sum(this IEnumerable<float> source)
+        public static float Сума(this IEnumerable<float> source)
             => Enumerable.Sum(source);
-        public static IEnumerable<TSource> Take<TSource>(this IEnumerable<TSource> source, Range range)
+        public static IEnumerable<TSource> Взяти<TSource>(this IEnumerable<TSource> source, Range range)
             => Enumerable.Take(source, range);
-        public static IEnumerable<TSource> Take<TSource>(this IEnumerable<TSource> source, int count)
+        public static IEnumerable<TSource> Взяти<TSource>(this IEnumerable<TSource> source, int count)
             => Enumerable.Take(source, count);
-        public static IEnumerable<TSource> TakeLast<TSource>(this IEnumerable<TSource> source, int count)
+        public static IEnumerable<TSource> ВзятиЗКінця<TSource>(this IEnumerable<TSource> source, int count)
             => Enumerable.TakeLast(source, count);
-        public static IEnumerable<TSource> TakeWhile<TSource>(this IEnumerable<TSource> source, Func<TSource, int, bool> predicate)
+        public static IEnumerable<TSource> ВзятиПоки<TSource>(this IEnumerable<TSource> source, Func<TSource, int, bool> predicate)
             => Enumerable.TakeWhile(source, predicate);
-        public static IEnumerable<TSource> TakeWhile<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+        public static IEnumerable<TSource> ВзятиПоки<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
             => Enumerable.TakeWhile(source, predicate);
-        public static IOrderedEnumerable<TSource> ThenBy<TSource, TKey>(this IOrderedEnumerable<TSource> source, Func<TSource, TKey> keySelector)
+        public static IOrderedEnumerable<TSource> ПотімПо<TSource, TKey>(this IOrderedEnumerable<TSource> source, Func<TSource, TKey> keySelector)
             => Enumerable.ThenBy(source, keySelector);
-        public static IOrderedEnumerable<TSource> ThenBy<TSource, TKey>(this IOrderedEnumerable<TSource> source, Func<TSource, TKey> keySelector, IComparer<TKey>? comparer)
+        public static IOrderedEnumerable<TSource> ПотімПо<TSource, TKey>(this IOrderedEnumerable<TSource> source, Func<TSource, TKey> keySelector, IComparer<TKey>? comparer)
             => Enumerable.ThenBy(source, keySelector, comparer);
-        public static IOrderedEnumerable<TSource> ThenByDescending<TSource, TKey>(this IOrderedEnumerable<TSource> source, Func<TSource, TKey> keySelector)
+        public static IOrderedEnumerable<TSource> ПотімПоСпаданню<TSource, TKey>(this IOrderedEnumerable<TSource> source, Func<TSource, TKey> keySelector)
             => Enumerable.ThenByDescending(source, keySelector);
-        public static IOrderedEnumerable<TSource> ThenByDescending<TSource, TKey>(this IOrderedEnumerable<TSource> source, Func<TSource, TKey> keySelector, IComparer<TKey>? comparer)
+        public static IOrderedEnumerable<TSource> ПотімПоСпаданню<TSource, TKey>(this IOrderedEnumerable<TSource> source, Func<TSource, TKey> keySelector, IComparer<TKey>? comparer)
             => Enumerable.ThenByDescending(source, keySelector, comparer);
-        public static TSource[] ToArray<TSource>(this IEnumerable<TSource> source)
+        public static TSource[] ДоМасиву<TSource>(this IEnumerable<TSource> source)
             => Enumerable.ToArray(source);
-        public static Dictionary<TKey, TElement> ToDictionary<TSource, TKey, TElement>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector, Func<TSource, TElement> elementSelector, IEqualityComparer<TKey>? comparer) where TKey : notnull
+        public static Dictionary<TKey, TElement> ДоСловника<TSource, TKey, TElement>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector, Func<TSource, TElement> elementSelector, IEqualityComparer<TKey>? comparer) where TKey : notnull
             => Enumerable.ToDictionary(source, keySelector, elementSelector, comparer);
-        public static Dictionary<TKey, TElement> ToDictionary<TSource, TKey, TElement>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector, Func<TSource, TElement> elementSelector) where TKey : notnull
+        public static Dictionary<TKey, TElement> ДоСловника<TSource, TKey, TElement>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector, Func<TSource, TElement> elementSelector) where TKey : notnull
             => Enumerable.ToDictionary(source, keySelector, elementSelector);
-        public static Dictionary<TKey, TSource> ToDictionary<TSource, TKey>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector, IEqualityComparer<TKey>? comparer) where TKey : notnull
+        public static Dictionary<TKey, TSource> ДоСловника<TSource, TKey>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector, IEqualityComparer<TKey>? comparer) where TKey : notnull
             => Enumerable.ToDictionary(source, keySelector, comparer);
-        public static Dictionary<TKey, TSource> ToDictionary<TSource, TKey>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector) where TKey : notnull
+        public static Dictionary<TKey, TSource> ДоСловника<TSource, TKey>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector) where TKey : notnull
             => Enumerable.ToDictionary(source, keySelector);
-        public static Dictionary<TKey, TValue> ToDictionary<TKey, TValue>(this IEnumerable<(TKey Key, TValue Value)> source) where TKey : notnull
+        public static Dictionary<TKey, TValue> ДоСловника<TKey, TValue>(this IEnumerable<(TKey Key, TValue Value)> source) where TKey : notnull
             => Enumerable.ToDictionary(source);
-        public static Dictionary<TKey, TValue> ToDictionary<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> source, IEqualityComparer<TKey>? comparer) where TKey : notnull
+        public static Dictionary<TKey, TValue> ДоСловника<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> source, IEqualityComparer<TKey>? comparer) where TKey : notnull
             => Enumerable.ToDictionary(source, comparer);
-        public static Dictionary<TKey, TValue> ToDictionary<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> source) where TKey : notnull
+        public static Dictionary<TKey, TValue> ДоСловника<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> source) where TKey : notnull
             => Enumerable.ToDictionary(source);
-        public static Dictionary<TKey, TValue> ToDictionary<TKey, TValue>(this IEnumerable<(TKey Key, TValue Value)> source, IEqualityComparer<TKey>? comparer) where TKey : notnull
+        public static Dictionary<TKey, TValue> ДоСловника<TKey, TValue>(this IEnumerable<(TKey Key, TValue Value)> source, IEqualityComparer<TKey>? comparer) where TKey : notnull
             => Enumerable.ToDictionary(source, comparer);
-        public static HashSet<TSource> ToHashSet<TSource>(this IEnumerable<TSource> source)
+        public static HashSet<TSource> ДоХешованоїМножини<TSource>(this IEnumerable<TSource> source)
             => Enumerable.ToHashSet(source);
-        public static HashSet<TSource> ToHashSet<TSource>(this IEnumerable<TSource> source, IEqualityComparer<TSource>? comparer)
+        public static HashSet<TSource> ДоХешованоїМножини<TSource>(this IEnumerable<TSource> source, IEqualityComparer<TSource>? comparer)
             => Enumerable.ToHashSet(source, comparer);
-        public static List<TSource> ToList<TSource>(this IEnumerable<TSource> source)
+        public static List<TSource> ДоСписку<TSource>(this IEnumerable<TSource> source)
             => Enumerable.ToList(source);
-        public static ILookup<TKey, TElement> ToLookup<TSource, TKey, TElement>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector, Func<TSource, TElement> elementSelector)
+        public static ILookup<TKey, TElement> ДоПошуку<TSource, TKey, TElement>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector, Func<TSource, TElement> elementSelector)
             => Enumerable.ToLookup(source, keySelector, elementSelector);
-        public static ILookup<TKey, TElement> ToLookup<TSource, TKey, TElement>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector, Func<TSource, TElement> elementSelector, IEqualityComparer<TKey>? comparer)
+        public static ILookup<TKey, TElement> ДоПошуку<TSource, TKey, TElement>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector, Func<TSource, TElement> elementSelector, IEqualityComparer<TKey>? comparer)
             => Enumerable.ToLookup(source, keySelector, elementSelector, comparer);
-        public static ILookup<TKey, TSource> ToLookup<TSource, TKey>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector)
+        public static ILookup<TKey, TSource> ДоПошуку<TSource, TKey>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector)
             => Enumerable.ToLookup(source, keySelector);
-        public static ILookup<TKey, TSource> ToLookup<TSource, TKey>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector, IEqualityComparer<TKey>? comparer)
+        public static ILookup<TKey, TSource> ДоПошуку<TSource, TKey>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector, IEqualityComparer<TKey>? comparer)
             => Enumerable.ToLookup(source, keySelector, comparer);
-        public static bool TryGetNonEnumeratedCount<TSource>(this IEnumerable<TSource> source, out int count)
+        public static bool СпробуватиВзятиНеПеречисляємуКількість<TSource>(this IEnumerable<TSource> source, out int count)
             => Enumerable.TryGetNonEnumeratedCount(source, out count);
-        public static IEnumerable<TSource> Union<TSource>(this IEnumerable<TSource> first, IEnumerable<TSource> second)
+        public static IEnumerable<TSource> Обєднати<TSource>(this IEnumerable<TSource> first, IEnumerable<TSource> second)
             => Enumerable.Union(first, second);
-        public static IEnumerable<TSource> Union<TSource>(this IEnumerable<TSource> first, IEnumerable<TSource> second, IEqualityComparer<TSource>? comparer)
+        public static IEnumerable<TSource> Обєднати<TSource>(this IEnumerable<TSource> first, IEnumerable<TSource> second, IEqualityComparer<TSource>? comparer)
             => Enumerable.Union(first, second, comparer);
-        public static IEnumerable<TSource> UnionBy<TSource, TKey>(this IEnumerable<TSource> first, IEnumerable<TSource> second, Func<TSource, TKey> keySelector)
+        public static IEnumerable<TSource> ОбєднатиПо<TSource, TKey>(this IEnumerable<TSource> first, IEnumerable<TSource> second, Func<TSource, TKey> keySelector)
             => Enumerable.UnionBy(first, second, keySelector);
-        public static IEnumerable<TSource> UnionBy<TSource, TKey>(this IEnumerable<TSource> first, IEnumerable<TSource> second, Func<TSource, TKey> keySelector, IEqualityComparer<TKey>? comparer)
+        public static IEnumerable<TSource> ОбєднатиПо<TSource, TKey>(this IEnumerable<TSource> first, IEnumerable<TSource> second, Func<TSource, TKey> keySelector, IEqualityComparer<TKey>? comparer)
             => Enumerable.UnionBy(first, second, keySelector, comparer);
-        public static IEnumerable<TSource> Where<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+        public static IEnumerable<TSource> Коли<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
             => Enumerable.Where(source, predicate);
-        public static IEnumerable<TSource> Where<TSource>(this IEnumerable<TSource> source, Func<TSource, int, bool> predicate)
+        public static IEnumerable<TSource> Коли<TSource>(this IEnumerable<TSource> source, Func<TSource, int, bool> predicate)
             => Enumerable.Where(source, predicate);
-        public static IEnumerable<(TFirst First, TSecond Second, TThird Third)> Zip<TFirst, TSecond, TThird>(this IEnumerable<TFirst> first, IEnumerable<TSecond> second, IEnumerable<TThird> third)
+        public static IEnumerable<(TFirst First, TSecond Second, TThird Third)> Зазіпувати<TFirst, TSecond, TThird>(this IEnumerable<TFirst> first, IEnumerable<TSecond> second, IEnumerable<TThird> third)
             => Enumerable.Zip(first, second, third);
-        public static IEnumerable<(TFirst First, TSecond Second)> Zip<TFirst, TSecond>(this IEnumerable<TFirst> first, IEnumerable<TSecond> second)
+        public static IEnumerable<(TFirst First, TSecond Second)> Зазіпувати<TFirst, TSecond>(this IEnumerable<TFirst> first, IEnumerable<TSecond> second)
             => Enumerable.Zip(first, second);
-        public static IEnumerable<TResult> Zip<TFirst, TSecond, TResult>(this IEnumerable<TFirst> first, IEnumerable<TSecond> second, Func<TFirst, TSecond, TResult> resultSelector)
+        public static IEnumerable<TResult> Зазіпувати<TFirst, TSecond, TResult>(this IEnumerable<TFirst> first, IEnumerable<TSecond> second, Func<TFirst, TSecond, TResult> resultSelector)
             => Enumerable.Zip(first, second, resultSelector);
     }
 }

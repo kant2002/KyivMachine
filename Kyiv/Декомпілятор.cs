@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using Система.Лінкью;
 using static Kyiv.Конвертер;
 
 namespace Kyiv;
@@ -15,7 +15,7 @@ public class Декомпілятор
     {
         List<string> команди = new List<string>();
         List<int> точкиПереходу = new();
-        foreach (var (лінія, адреса) in лістінг.ОдиниціКоду.SelectMany(ок => ок.Команди.Select((к, а) => (к, ок.ПочатковаАдреса + а))))
+        foreach (var (лінія, адреса) in лістінг.ОдиниціКоду.ВибратиБагато(ок => ок.Команди.Вибрати((к, а) => (к, ок.ПочатковаАдреса + а))))
         {
             var команда = ПарсерКоманд.Розібрати(лінія);
             switch (команда.Код)
@@ -58,15 +58,15 @@ public class Декомпілятор
             }
         }
 
-        foreach (var (лінія, адреса) in лістінг.ОдиниціКоду.SelectMany(ок => ок.Команди.Select((к, а) => (к, ок.ПочатковаАдреса + а))))
+        foreach (var (лінія, адреса) in лістінг.ОдиниціКоду.ВибратиБагато(ок => ок.Команди.Вибрати((к, а) => (к, ок.ПочатковаАдреса + а))))
         {
             try
             {
                 var мітка = точкиПереходу.Contains(адреса) ? new string[] { $"lbl_{До8РічноїАдреси(адреса)}:" } : [];
-                команди.AddRange(мітка.Union(
+                команди.AddRange(мітка.Обєднати(
                     ДоАссемблера(ПарсерКоманд.Розібрати(лінія), true)
-                        .Select(ВставитиЗмінні)
-                        .Select(ДоРядка)));
+                        .Вибрати(ВставитиЗмінні)
+                        .Вибрати(ДоРядка)));
             }
             catch
             {
@@ -82,7 +82,7 @@ public class Декомпілятор
     }
     private static string ДоРядка(Операція операція)
     {
-        return string.Join(Environment.NewLine, операція.ToString().ReplaceLineEndings().Split(Environment.NewLine).Select(x => "    " + x));
+        return string.Join(Environment.NewLine, операція.ToString().ReplaceLineEndings().Split(Environment.NewLine).Вибрати(x => "    " + x));
     }
 
     private static IEnumerable<Операція> ДоАссемблера(СтруктураКоманди команда, bool html)
