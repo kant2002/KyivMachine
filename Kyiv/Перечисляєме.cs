@@ -158,7 +158,11 @@ namespace Система.Лінкью
             => Enumerable.Join(outer, inner, outerKeySelector, innerKeySelector, resultSelector, comparer);
         public static TSource Останній<TSource>(this IEnumerable<TSource> source)
             => Enumerable.Last(source);
+        public static TSource Остання<TSource>(this IEnumerable<TSource> source)
+            => Enumerable.Last(source);
         public static TSource Останній<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+            => Enumerable.Last(source, predicate);
+        public static TSource Остання<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
             => Enumerable.Last(source, predicate);
         public static TSource ОстаннійАбоЗаЗамовчанням<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate, TSource defaultValue)
             => Enumerable.LastOrDefault(source, predicate, defaultValue);
@@ -167,6 +171,14 @@ namespace Система.Лінкью
         public static TSource ОстаннійАбоЗаЗамовчанням<TSource>(this IEnumerable<TSource> source, TSource defaultValue)
             => Enumerable.LastOrDefault(source, defaultValue);
         public static TSource? ОстаннійАбоЗаЗамовчанням<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+            => Enumerable.LastOrDefault(source, predicate);
+        public static TSource ОстанняАбоЗаЗамовчанням<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate, TSource defaultValue)
+            => Enumerable.LastOrDefault(source, predicate, defaultValue);
+        public static TSource? ОстанняАбоЗаЗамовчанням<TSource>(this IEnumerable<TSource> source)
+            => Enumerable.LastOrDefault(source);
+        public static TSource ОстанняАбоЗаЗамовчанням<TSource>(this IEnumerable<TSource> source, TSource defaultValue)
+            => Enumerable.LastOrDefault(source, defaultValue);
+        public static TSource? ОстанняАбоЗаЗамовчанням<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
             => Enumerable.LastOrDefault(source, predicate);
         public static long ДовгаКількість<TSource>(this IEnumerable<TSource> source)
             => Enumerable.LongCount(source);
