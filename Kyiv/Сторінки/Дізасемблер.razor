@@ -29,7 +29,7 @@
         <label>
             Вбудована підпрограма із незмінної пам'яти
         </label>
-        <InputSelect @bind-Value="Варіант">
+        <InputSelect @bind-Value="Варіант" class="form-control">
             <option value="">
                 Ручні адреси ...
             </option>
@@ -99,7 +99,7 @@
                 "усовершенствованній метод Гаусса",
             ];
         }
-        <InputSelect @bind-Value="ВаріантПідпрограм">
+        <InputSelect @bind-Value="ВаріантПідпрограм" class="form-control">
             <option value="">
                 Виберіть підпрограму ...
             </option>
@@ -113,11 +113,11 @@
         </InputSelect>
         <label>
             Початкова адреса <small>(8-річне число)</small>
-            <InputNumber @bind-Value="ПочатковаАдреса" size="4" />
+            <InputNumber @bind-Value="ПочатковаАдреса" size="4" class="form-control" />
         </label>
         <label>
             Кількість слів
-            <InputNumber @bind-Value="КількістьСлів" size="4" />
+            <InputNumber @bind-Value="КількістьСлів" size="4" class="form-control" />
         </label>
 
         <button type="button" title="Завантажити програму із ПЗП" class="btn btn-primary" @onclick=Завантажити>Завантажити</button>
