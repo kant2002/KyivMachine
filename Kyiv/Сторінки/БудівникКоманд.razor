@@ -1,165 +1,190 @@
 ﻿@page "/command-builder"
-<h3>Будівник команд</h3>
+@using System.Globalization
+<h3>@Ресурси.СторінкаКоманди</h3>
+@if (CultureInfo.CurrentUICulture.Name == "uk-UA")
+{
+    <p>
+        Команди рахувальної машини "Київ" мають 4 блока
+    </p>
 
-<p>
-    Команди рахувальна машини "Київ" мають 4 блока
-</p>
+    <p>
+        Код команди - 5 біт.
+    </p>
 
-<p>
-    Код команди - 5 біт.
-</p>
+    <p>
+        Адреса I - 11 біт, та 1 біт модифікації
+    </p>
 
-<p>
-    Адреса I - 11 біт, та 1 біт модифікації
-</p>
+    <p>
+        Адреса II - 11 біт, та 1 біт модифікації
+    </p>
 
-<p>
-    Адреса II - 11 біт, та 1 біт модифікації
-</p>
+    <p>
+        Адреса III - 11 біт, та 1 біт модифікації. Зазвичай місце куди зберігають результат.
+    </p>
+}
+else
+{
+    <p>
+        The commands of the Kiev calculating machine have 4 blocks.
+    </p>
 
-<p>
-    Адреса III - 11 біт, та 1 біт модифікації. Зазвичай місце куди зберігають результат.
-</p>
+    <p>
+        Command code - 5 bits.
+    </p>
+
+    <p>
+        Address I - 11 bits, and 1 bit of modification
+    </p>
+
+    <p>
+        Address II - 11 bits, and 1 bit of modification
+    </p>
+
+    <p>
+        Address III - 11 bits, and 1 bit of modification. Usually the place where the result is stored.
+    </p>
+}
 
 <div class="row">
     <div class="col-12 col-md-3">
         <InputSelect class="form-select" @bind-Value="Код">
             <option checked="@(Код == "00")"
                     value="00">
-                00 - Пуста команда
+                00 - @Ресурси.Команда00
             </option>
             <option checked="@(Код == "01")"
                     value="01">
-                01 - Додавання
+                01 - @Ресурси.Команда01
             </option>
             <option checked="@(Код == "02")"
                     value="02">
-                02 - Віднімання
+                02 - @Ресурси.Команда02
             </option>
             <option checked="@(Код == "03")"
                     value="03">
-                03 - Додавання команд
+                03 - @Ресурси.Команда03
             </option>
             <option checked="@(Код == "04")"
                     value="04">
-                04 - Знакове порівняння
+                04 - @Ресурси.Команда04
             </option>
             <option checked="@(Код == "05")"
                     value="05">
-                05 - Беззнакове порівняння
+                05 - @Ресурси.Команда05
             </option>
             <option checked="@(Код == "06")"
                     value="06">
-                06 - Віднімання по модулю
+                06 - @Ресурси.Команда06
             </option>
             <option checked="@(Код == "07")"
                     value="07">
-                07 - Циклічне додавання
+                07 - @Ресурси.Команда07
             </option>
             <option checked="@(Код == "10")"
                     value="10">
-                10 - Множення без скруглення
+                10 - @Ресурси.Команда10
             </option>
             <option checked="@(Код == "11")"
                     value="11">
-                11 - Множення із скруглення
+                11 - @Ресурси.Команда11
             </option>
             <option checked="@(Код == "12")"
                     value="12">
-                12 - Ділення
+                12 - @Ресурси.Команда12
             </option>
             <option checked="@(Код == "13")"
                     value="13">
-                13 - Логічний сдвіг
+                13 - @Ресурси.Команда13
             </option>
             <option checked="@(Код == "14")"
                     value="14">
-                14 - Логічне додавання
+                14 - @Ресурси.Команда14
             </option>
             <option checked="@(Код == "15")"
                     value="15">
-                15 - Логічне множення
+                15 - @Ресурси.Команда15
             </option>
             <option checked="@(Код == "16")"
                     value="16">
-                16 - Точне порівняння
+                16 - @Ресурси.Команда16
             </option>
             <option checked="@(Код == "17")"
                     value="17">
-                17 - Рівнозначно
+                17 - @Ресурси.Команда17
             </option>
             <option checked="@(Код == "20")"
                     value="20">
-                20 - Введення чисел
+                20 - @Ресурси.Команда20
             </option>
             <option checked="@(Код == "21")"
                     value="21">
-                21 - Введення команд
+                21 - @Ресурси.Команда21
             </option>
             <option checked="@(Код == "22")"
                     value="22">
-                22 - Вивід кодов
+                22 - @Ресурси.Команда22
             </option>
             <option checked="@(Код == "23")"
                     value="23">
-                23 - Запис на магнітний барабан
+                23 - @Ресурси.Команда23
             </option>
             <option checked="@(Код == "24")"
                     value="24">
-                24 - Прочитати із магнітного барабана
+                24 - @Ресурси.Команда24
             </option>
             <option checked="@(Код == "25")"
                     value="25">
-                25 - Доступ до магнітного барабана
+                25 - @Ресурси.Команда25
             </option>
             <option checked="@(Код == "26")"
                     value="26">
-                26 - Початок групової операції
+                26 - @Ресурси.Команда26
             </option>
             <option checked="@(Код == "27")"
                     value="27">
-                27 - Кінець групової операції
+                27 - @Ресурси.Команда27
             </option>
             <option checked="@(Код == "30")"
                     value="30">
-                30 - Умовний перехід на підпрограму
+                30 - @Ресурси.Команда30
             </option>
             <option checked="@(Код == "31")"
                     value="31">
-                31 - Умовний перехід по знаку
+                31 - @Ресурси.Команда31
             </option>
             <option checked="@(Код == "32")"
                     value="32">
-                32 - Перехід по регістру повернення
+                32 - @Ресурси.Команда32
             </option>
             <option checked="@(Код == "33")"
                     value="33">
-                33 - Стій машина
+                33 - @Ресурси.Команда33
             </option>
             <option checked="@(Код == "34")"
                     value="34">
-                34 - Перехід по фіксатору
+                34 - @Ресурси.Команда34
             </option>
             <option checked="@(Код == "35")"
                     value="35">
-                35 - Нормалізація
+                35 - @Ресурси.Команда35
             </option>
         </InputSelect>
     </div>
     <div class="col col-md-1">
-        <InputCheckbox class="form-check-input" @bind-Value="НепрямаАдресаціяАдреса1" title="Включає неявну адресацію" />
+        <InputCheckbox class="form-check-input" @bind-Value="НепрямаАдресаціяАдреса1" title="@Ресурси.ВключаєНеявнуАдресацію" />
         <ВвідРегістра @bind-Value="@Адреса1" style="width: 70px" />
     </div>
     <div class="col col-md-1">
-        <InputCheckbox class="form-check-input" @bind-Value="НепрямаАдресаціяАдреса2" title="Включає неявну адресацію" />
+        <InputCheckbox class="form-check-input" @bind-Value="НепрямаАдресаціяАдреса2" title="@Ресурси.ВключаєНеявнуАдресацію" />
         <ВвідРегістра @bind-Value="@Адреса2" style="width: 70px" />
     </div>
     <div class="col col-md-1">
-        <InputCheckbox class="form-check-input" @bind-Value="НепрямаАдресаціяАдреса3" title="Включає неявну адресацію" />
+        <InputCheckbox class="form-check-input" @bind-Value="НепрямаАдресаціяАдреса3" title="@Ресурси.ВключаєНеявнуАдресацію" />
         <ВвідРегістра @bind-Value="@Адреса3" style="width: 70px" />
     </div>
 </div>
-<label>Команда</label>
+<label>@Ресурси.Команда</label>
 @Команда
 
 @code {

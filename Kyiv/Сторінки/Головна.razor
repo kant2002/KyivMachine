@@ -4,30 +4,25 @@
 @inject ILogger<Головна> Logger
 @inject МашинаКиїв Machine
 
-<НазваСторінки>Головна</НазваСторінки>
+<НазваСторінки>@Ресурси.СторінкаГоловна</НазваСторінки>
 
 <NavLink class="nav-link" href="disassembler">
-    <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Дізасемблер
+    <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> @Ресурси.СторінкаДізасемблер
 </NavLink>
-@* <h1>Hello, world!</h1>
 
-<EditForm EditContext="контекстРедагування" OnValidSubmit="Відправити" FormName="Головна">
-    <ВвідКоманди @bind-Value="Model!.Command" />
-    <ValidationMessage For="() => Model!.Command" />
-</EditForm> *@
-<h3>Регистри</h3>
-<label title="Регістр лікувальника команд">C</label>
+<h3>@Ресурси.Регистри</h3>
+<label title="@Ресурси.РегістрЛікувальникаКоманд">C</label>
 <ВвідРегістра @bind-Value="@Machine.РегістрС" />
-<label title="Регістр повернення">Р</label>
+<label title="@Ресурси.РегістрПовернення">Р</label>
 @Machine.РегістрР
-<label title="Регістр закінчення циклу">Ц</label>
+<label title="@Ресурси.РегістрЗакінченняЦиклу">Ц</label>
 @Machine.РегістрЦ
-<label title="Регістр лікувальних циклу">А</label>
+<label title="@Ресурси.РегістрЛікувальнихЦиклу">А</label>
 <ВвідРегістра @bind-Value="@Machine.РегістрА" />
 
 <div class="row">
     <div class="col">
-        <label title="Регістр поточної команди">К</label>
+        <label title="@Ресурси.РегістрПоточноїКоманди">К</label>
         @ПарсерКоманд.Сконвертувати(Machine.РегістрК)
     </div>
 </div>
@@ -39,19 +34,21 @@
 
 <div class="form-check">
     <InputCheckbox @bind-Value="Machine.АварійнаЗупинка" id="АварійнаЗупинка" />
-    <label class="form-check-label" for="АварійнаЗупинка" title="Включає аварійну зупинку при переповненні у аріфметичних операціях">
-        Аварійна зупинка
+    <label class="form-check-label" for="АварійнаЗупинка" 
+           title="@Ресурси.ПідказкаАварійнаЗупинка">
+        @Ресурси.МіткаАварійнаЗупинка
     </label>
 </div>
 
 <div class="form-check">
     <InputCheckbox @bind-Value="Machine.ТумблерБлокировкиАварийногоОстанова" id="ТумблерБлокировкиАварийногоОстанова" />
-    <label class="form-check-label" for="ТумблерБлокировкиАварийногоОстанова" title="Блокує аварійну зупинку при переповненні у аріфметичних операціях">
-        Блокировка аварийної зупинки
+    <label class="form-check-label" for="ТумблерБлокировкиАварийногоОстанова"
+           title="@Ресурси.ПідказкаБлокировкаАварийноїЗупинки">
+        @Ресурси.МіткаБлокировкаАварийноїЗупинки
     </label>
 </div>
 
-<h3>Відомі адреси</h3>
+<h3>@Ресурси.МіткаВідоміАдреси</h3>
 <div class="row">
     <div class="col col-md-1">
         <label>парам</label>
@@ -108,10 +105,10 @@
     </div>
 </div>
 
-<button type="button" class="btn btn-primary" @onclick=Крок>Крок</button>
+<button type="button" class="btn btn-primary" @onclick=Крок>@Ресурси.Крок</button>
 
-<h3>Підгрузка зашитих підпрограм</h3>
-<p>Натисність на кнопку щоб змінити поточну команду на старт підпрограми, вшитої у ПЗП. Ви можете натискати кнопку Крок для покрокової відладки</p>
+<h3>@Ресурси.МіткаПідгрузкаЗашитихПідпрограм</h3>
+<p>@Ресурси.ПідказкаПідгрузкаЗашитихПідпрограм</p>
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиКорінь>sqrt(x)</button>
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиКонвертацію>2 до 10</button>
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиЕкспоненту>1/4 * e(x)</button>
@@ -123,7 +120,7 @@
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиАркСінус>1/π * arcsin(X) (-1 &lt;x &lt; 1)</button>
 <button type="button" class="btn btn-secondary" @onclick=ПротестуватиАркКосінус>1/π * arccos(X) (-1 &lt;x &lt; 1)</button>
 
-<h3>Вивід прінтера</h3>
+<h3>@Ресурси.МіткаВивідПрінтера</h3>
 <pre>
 @string.Join(Environment.NewLine, Machine.НадрукованіРядки)
 </pre>

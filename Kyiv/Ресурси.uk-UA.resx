@@ -120,8 +120,149 @@
   <data name="ВиберітьКультуру" xml:space="preserve">
     <value>Виберіть вашу локаль:</value>
   </data>
+  <data name="ВключаєНеявнуАдресацію" xml:space="preserve">
+    <value>Включає неявну адресацію</value>
+  </data>
+  <data name="ГенераторВипадковихЧисел" xml:space="preserve">
+    <value>Генератор випадкових чисел</value>
+  </data>
+  <data name="Команда" xml:space="preserve">
+    <value>Команда</value>
+  </data>
+  <data name="Команда00" xml:space="preserve">
+    <value>Пуста команда</value>
+  </data>
+  <data name="Команда01" xml:space="preserve">
+    <value>Додавання</value>
+  </data>
+  <data name="Команда02" xml:space="preserve">
+    <value>Віднімання</value>
+  </data>
+  <data name="Команда03" xml:space="preserve">
+    <value>Додавання команд</value>
+  </data>
+  <data name="Команда04" xml:space="preserve">
+    <value>Знакове порівняння</value>
+  </data>
+  <data name="Команда05" xml:space="preserve">
+    <value>Беззнакове порівняння</value>
+  </data>
+  <data name="Команда06" xml:space="preserve">
+    <value>Віднімання по модулю</value>
+  </data>
+  <data name="Команда07" xml:space="preserve">
+    <value>Циклічне додавання</value>
+  </data>
+  <data name="Команда10" xml:space="preserve">
+    <value>Множення без скруглення</value>
+  </data>
+  <data name="Команда11" xml:space="preserve">
+    <value>Множення із скругленням</value>
+  </data>
+  <data name="Команда12" xml:space="preserve">
+    <value>Ділення</value>
+  </data>
+  <data name="Команда13" xml:space="preserve">
+    <value>Логічний сдвіг</value>
+  </data>
+  <data name="Команда14" xml:space="preserve">
+    <value>Логічне додавання</value>
+  </data>
+  <data name="Команда15" xml:space="preserve">
+    <value>Логічне множення</value>
+  </data>
+  <data name="Команда16" xml:space="preserve">
+    <value>Точне порівняння</value>
+  </data>
+  <data name="Команда17" xml:space="preserve">
+    <value>Рівнозначно</value>
+  </data>
+  <data name="Команда20" xml:space="preserve">
+    <value>Введення чисел</value>
+  </data>
+  <data name="Команда21" xml:space="preserve">
+    <value>Введення команд</value>
+  </data>
+  <data name="Команда22" xml:space="preserve">
+    <value>Вивід кодов</value>
+  </data>
+  <data name="Команда23" xml:space="preserve">
+    <value>Запис на магнітний барабан</value>
+  </data>
+  <data name="Команда24" xml:space="preserve">
+    <value>Прочитати із магнітного барабана</value>
+  </data>
+  <data name="Команда25" xml:space="preserve">
+    <value>Доступ до магнітного барабана</value>
+  </data>
+  <data name="Команда26" xml:space="preserve">
+    <value>Початок групової операції</value>
+  </data>
+  <data name="Команда27" xml:space="preserve">
+    <value>Кінець групової операції</value>
+  </data>
+  <data name="Команда30" xml:space="preserve">
+    <value>Умовний перехід на підпрограму</value>
+  </data>
+  <data name="Команда31" xml:space="preserve">
+    <value>Умовний перехід по знаку</value>
+  </data>
+  <data name="Команда32" xml:space="preserve">
+    <value>Перехід по регістру повернення</value>
+  </data>
+  <data name="Команда33" xml:space="preserve">
+    <value>Стій машина</value>
+  </data>
+  <data name="Команда34" xml:space="preserve">
+    <value>Перехід по фіксатору</value>
+  </data>
+  <data name="Команда35" xml:space="preserve">
+    <value>Нормалізація</value>
+  </data>
+  <data name="Крок" xml:space="preserve">
+    <value>Крок</value>
+  </data>
+  <data name="МіткаАварійнаЗупинка" xml:space="preserve">
+    <value>Аварійна зупинка</value>
+  </data>
+  <data name="МіткаБлокировкаАварийноїЗупинки" xml:space="preserve">
+    <value>Блокировка аварийної зупинки</value>
+  </data>
+  <data name="МіткаВідоміАдреси" xml:space="preserve">
+    <value>Відомі адреси</value>
+  </data>
+  <data name="МіткаПідгрузкаЗашитихПідпрограм" xml:space="preserve">
+    <value>Підгрузка зашитих підпрограм</value>
+  </data>
+  <data name="ПідказкаПідгрузкаЗашитихПідпрограм" xml:space="preserve">
+    <value>Натисність на кнопку щоб змінити поточну команду на старт підпрограми, вшитої у ПЗП. Ви можете натискати кнопку Крок для покрокової відладки</value>
+  </data>
+  <data name="ПідказкаАварійнаЗупинка" xml:space="preserve">
+    <value>Включає аварійну зупинку при переповненні у аріфметичних операціях</value>
+  </data>
+  <data name="ПідказкаБлокировкаАварийноїЗупинки" xml:space="preserve">
+    <value>Блокує аварійну зупинку при переповненні у аріфметичних операціях</value>
+  </data>
   <data name="ПроПроект" xml:space="preserve">
     <value>Про проект</value>
+  </data>
+  <data name="РегістрЗакінченняЦиклу" xml:space="preserve">
+    <value>Регістр закінчення циклу</value>
+  </data>
+  <data name="РегістрЛікувальникаКоманд" xml:space="preserve">
+    <value>Регістр лікувальника команд</value>
+  </data>
+  <data name="РегістрЛікувальнихЦиклу" xml:space="preserve">
+    <value>Регістр лікувальних циклу</value>
+  </data>
+  <data name="РегістрПовернення" xml:space="preserve">
+    <value>Регістр повернення</value>
+  </data>
+  <data name="РегістрПоточноїКоманди" xml:space="preserve">
+    <value>Регістр поточної команди</value>
+  </data>
+  <data name="Регистри" xml:space="preserve">
+    <value>Регистри</value>
   </data>
   <data name="СторінкаГоловна" xml:space="preserve">
     <value>Головна</value>
@@ -146,5 +287,8 @@
   </data>
   <data name="СторінкаПЗП" xml:space="preserve">
     <value>ПЗП</value>
+  </data>
+  <data name="МіткаВивідПрінтера" xml:space="preserve">
+    <value>Вивід прінтера</value>
   </data>
 </root>
