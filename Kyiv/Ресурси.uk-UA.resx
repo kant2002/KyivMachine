@@ -291,4 +291,52 @@
   <data name="МіткаВивідПрінтера" xml:space="preserve">
     <value>Вивід прінтера</value>
   </data>
+  <data name="МіткаКод" xml:space="preserve">
+    <value>Код</value>
+  </data>
+  <data name="ПідказкаКод" xml:space="preserve">
+    <value>Введіть набір команд</value>
+  </data>
+  <data name="МіткаПідказка" xml:space="preserve">
+    <value>Підказка</value>
+  </data>
+  <data name="МіткаПідпрограми" xml:space="preserve">
+    <value>Підпрограми</value>
+  </data>
+  <data name="ПідказкаПідпрограми" xml:space="preserve">
+    <value>Вбудована підпрограма із незмінної пам'яти</value>
+  </data>
+  <data name="ВаріантРучніАдреси" xml:space="preserve">
+    <value>Ручні адреси ...</value>
+  </data>
+  <data name="Варіант2до10" xml:space="preserve">
+    <value>из двоичной системы в десятичную</value>
+  </data>
+  <data name="ВаріантВиберітьПідпрограмму" xml:space="preserve">
+    <value>Виберіть підпрограму ...</value>
+  </data>
+  <data name="МіткаВідоміПідпрограмиІзКниги" xml:space="preserve">
+    <value>Відомі підпрограми із книги</value>
+  </data>
+  <data name="КнопкаЗавантажити" xml:space="preserve">
+    <value>Завантажити</value>
+  </data>
+  <data name="ПідказкаВиберітьПідпрограму" xml:space="preserve">
+    <value>Виберіть із одного із випадаючих списків підпрограму для декомпіляції.</value>
+  </data>
+  <data name="ПідказкаЗавантажити" xml:space="preserve">
+    <value>Завантажити програму із ПЗП</value>
+  </data>
+  <data name="МіткаЛістінгС" xml:space="preserve">
+    <value>Лістінг у псевдо-С</value>
+  </data>
+  <data name="МіткаПочатковаАдреса" xml:space="preserve">
+    <value>Початкова адреса</value>
+  </data>
+  <data name="ПідказкаПочатковаАдреса" xml:space="preserve">
+    <value>8-річне число</value>
+  </data>
+  <data name="МіткаКількістьСлів" xml:space="preserve">
+    <value>Кількість слів</value>
+  </data>
 </root>

@@ -61,6 +61,33 @@ namespace Kyiv {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to from binary to decimal.
+        /// </summary>
+        internal static string Варіант2до10 {
+            get {
+                return ResourceManager.GetString("Варіант2до10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select subroutine ....
+        /// </summary>
+        internal static string ВаріантВиберітьПідпрограмму {
+            get {
+                return ResourceManager.GetString("ВаріантВиберітьПідпрограмму", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manual addresses....
+        /// </summary>
+        internal static string ВаріантРучніАдреси {
+            get {
+                return ResourceManager.GetString("ВаріантРучніАдреси", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select your locale:.
         /// </summary>
         internal static string ВиберітьКультуру {
@@ -84,6 +111,15 @@ namespace Kyiv {
         internal static string ГенераторВипадковихЧисел {
             get {
                 return ResourceManager.GetString("ГенераторВипадковихЧисел", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Load.
+        /// </summary>
+        internal static string КнопкаЗавантажити {
+            get {
+                return ResourceManager.GetString("КнопкаЗавантажити", resourceCulture);
             }
         }
         
@@ -412,11 +448,74 @@ namespace Kyiv {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Known subroutines from book.
+        /// </summary>
+        internal static string МіткаВідоміПідпрограмиІзКниги {
+            get {
+                return ResourceManager.GetString("МіткаВідоміПідпрограмиІзКниги", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Words count.
+        /// </summary>
+        internal static string МіткаКількістьСлів {
+            get {
+                return ResourceManager.GetString("МіткаКількістьСлів", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Code.
+        /// </summary>
+        internal static string МіткаКод {
+            get {
+                return ResourceManager.GetString("МіткаКод", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Listing in pseudo-C.
+        /// </summary>
+        internal static string МіткаЛістінгС {
+            get {
+                return ResourceManager.GetString("МіткаЛістінгС", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Loading wired subroutine.
         /// </summary>
         internal static string МіткаПідгрузкаЗашитихПідпрограм {
             get {
                 return ResourceManager.GetString("МіткаПідгрузкаЗашитихПідпрограм", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Example.
+        /// </summary>
+        internal static string МіткаПідказка {
+            get {
+                return ResourceManager.GetString("МіткаПідказка", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subroutines.
+        /// </summary>
+        internal static string МіткаПідпрограми {
+            get {
+                return ResourceManager.GetString("МіткаПідпрограми", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starting address.
+        /// </summary>
+        internal static string МіткаПочатковаАдреса {
+            get {
+                return ResourceManager.GetString("МіткаПочатковаАдреса", resourceCulture);
             }
         }
         
@@ -439,11 +538,56 @@ namespace Kyiv {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select a subroutine to decompile from one of the drop-down lists..
+        /// </summary>
+        internal static string ПідказкаВиберітьПідпрограму {
+            get {
+                return ResourceManager.GetString("ПідказкаВиберітьПідпрограму", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Load program from ROM.
+        /// </summary>
+        internal static string ПідказкаЗавантажити {
+            get {
+                return ResourceManager.GetString("ПідказкаЗавантажити", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter a set of commands.
+        /// </summary>
+        internal static string ПідказкаКод {
+            get {
+                return ResourceManager.GetString("ПідказкаКод", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Press the button to change the current command to start a subroutine written in the ROM. You can press the Step button for step-by-step debugging..
         /// </summary>
         internal static string ПідказкаПідгрузкаЗашитихПідпрограм {
             get {
                 return ResourceManager.GetString("ПідказкаПідгрузкаЗашитихПідпрограм", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Built-in subroutine from non-volatile memory.
+        /// </summary>
+        internal static string ПідказкаПідпрограми {
+            get {
+                return ResourceManager.GetString("ПідказкаПідпрограми", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 8-bit number.
+        /// </summary>
+        internal static string ПідказкаПочатковаАдреса {
+            get {
+                return ResourceManager.GetString("ПідказкаПочатковаАдреса", resourceCulture);
             }
         }
         

@@ -291,4 +291,52 @@
   <data name="МіткаВивідПрінтера" xml:space="preserve">
     <value>Printer output</value>
   </data>
+  <data name="МіткаКод" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="ПідказкаКод" xml:space="preserve">
+    <value>Enter a set of commands</value>
+  </data>
+  <data name="МіткаПідказка" xml:space="preserve">
+    <value>Example</value>
+  </data>
+  <data name="МіткаПідпрограми" xml:space="preserve">
+    <value>Subroutines</value>
+  </data>
+  <data name="ПідказкаПідпрограми" xml:space="preserve">
+    <value>Built-in subroutine from non-volatile memory</value>
+  </data>
+  <data name="ВаріантРучніАдреси" xml:space="preserve">
+    <value>Manual addresses...</value>
+  </data>
+  <data name="Варіант2до10" xml:space="preserve">
+    <value>from binary to decimal</value>
+  </data>
+  <data name="ВаріантВиберітьПідпрограмму" xml:space="preserve">
+    <value>Select subroutine ...</value>
+  </data>
+  <data name="МіткаВідоміПідпрограмиІзКниги" xml:space="preserve">
+    <value>Known subroutines from book</value>
+  </data>
+  <data name="КнопкаЗавантажити" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="ПідказкаВиберітьПідпрограму" xml:space="preserve">
+    <value>Select a subroutine to decompile from one of the drop-down lists.</value>
+  </data>
+  <data name="ПідказкаЗавантажити" xml:space="preserve">
+    <value>Load program from ROM</value>
+  </data>
+  <data name="МіткаЛістінгС" xml:space="preserve">
+    <value>Listing in pseudo-C</value>
+  </data>
+  <data name="МіткаПочатковаАдреса" xml:space="preserve">
+    <value>Starting address</value>
+  </data>
+  <data name="ПідказкаПочатковаАдреса" xml:space="preserve">
+    <value>8-bit number</value>
+  </data>
+  <data name="МіткаКількістьСлів" xml:space="preserve">
+    <value>Words count</value>
+  </data>
 </root>
