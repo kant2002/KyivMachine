@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".github/workflows/deployment.yml" />
+    <File Path="nuget.config" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="Kyiv.Tests/Kyiv.Tests.csproj" />
+  <Project Path="Kyiv/Kyiv.csproj" />
+</Solution>
