@@ -28,6 +28,13 @@
         <a href="" class="reload">Перезавантажити</a>
         <a class="dismiss">🗙</a>
     </div>
+    <script>
+      window.blazorCulture = {
+        get: () => window.localStorage['BlazorCulture'],
+        set: (value) => window.localStorage['BlazorCulture'] = value
+      };
+    </script>
+
     <script src="_framework/blazor.webassembly.js"></script>
     <script src="_framework/aspnetcore-browser-refresh.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
