@@ -29,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Макет\Ресурси.Designer.cs">
+    <Compile Update="Ресурси.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Ресурси.resx</DependentUpon>
@@ -43,7 +43,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Макет\Ресурси.resx">
+    <EmbeddedResource Update="Ресурси.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Ресурси.Designer.cs</LastGenOutput>
     </EmbeddedResource>

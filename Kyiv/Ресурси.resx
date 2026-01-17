@@ -120,8 +120,149 @@
   <data name="ВиберітьКультуру" xml:space="preserve">
     <value>Select your locale:</value>
   </data>
+  <data name="ВключаєНеявнуАдресацію" xml:space="preserve">
+    <value>Enable implicit addressing</value>
+  </data>
+  <data name="ГенераторВипадковихЧисел" xml:space="preserve">
+    <value>Random number generator</value>
+  </data>
+  <data name="Команда" xml:space="preserve">
+    <value>Command</value>
+  </data>
+  <data name="Команда00" xml:space="preserve">
+    <value>Empty command</value>
+  </data>
+  <data name="Команда01" xml:space="preserve">
+    <value>Addition</value>
+  </data>
+  <data name="Команда02" xml:space="preserve">
+    <value>Substraction</value>
+  </data>
+  <data name="Команда03" xml:space="preserve">
+    <value>Commands addition</value>
+  </data>
+  <data name="Команда04" xml:space="preserve">
+    <value>Signed comparison</value>
+  </data>
+  <data name="Команда05" xml:space="preserve">
+    <value>Unsigned comparison</value>
+  </data>
+  <data name="Команда06" xml:space="preserve">
+    <value>Modulo substraction</value>
+  </data>
+  <data name="Команда07" xml:space="preserve">
+    <value>Cyclic addition</value>
+  </data>
+  <data name="Команда10" xml:space="preserve">
+    <value>Multiplication without rounding</value>
+  </data>
+  <data name="Команда11" xml:space="preserve">
+    <value>Multiplication with rounding</value>
+  </data>
+  <data name="Команда12" xml:space="preserve">
+    <value>Division</value>
+  </data>
+  <data name="Команда13" xml:space="preserve">
+    <value>Logical shift</value>
+  </data>
+  <data name="Команда14" xml:space="preserve">
+    <value>Logical addition</value>
+  </data>
+  <data name="Команда15" xml:space="preserve">
+    <value>Logical multiplication</value>
+  </data>
+  <data name="Команда16" xml:space="preserve">
+    <value>Precision comparison</value>
+  </data>
+  <data name="Команда17" xml:space="preserve">
+    <value>Equivalence</value>
+  </data>
+  <data name="Команда20" xml:space="preserve">
+    <value>Entering numbers</value>
+  </data>
+  <data name="Команда21" xml:space="preserve">
+    <value>Entering commands</value>
+  </data>
+  <data name="Команда22" xml:space="preserve">
+    <value>Output codes</value>
+  </data>
+  <data name="Команда23" xml:space="preserve">
+    <value>Writing to reel</value>
+  </data>
+  <data name="Команда24" xml:space="preserve">
+    <value>Reading from reel</value>
+  </data>
+  <data name="Команда25" xml:space="preserve">
+    <value>Access to reel</value>
+  </data>
+  <data name="Команда26" xml:space="preserve">
+    <value>Starting group operation</value>
+  </data>
+  <data name="Команда27" xml:space="preserve">
+    <value>Finish group operation</value>
+  </data>
+  <data name="Команда30" xml:space="preserve">
+    <value>Conditional jump to subroutine</value>
+  </data>
+  <data name="Команда31" xml:space="preserve">
+    <value>Conditional jump based on sign</value>
+  </data>
+  <data name="Команда32" xml:space="preserve">
+    <value>Jump based on return register</value>
+  </data>
+  <data name="Команда33" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="Команда34" xml:space="preserve">
+    <value>Jump based on fixator</value>
+  </data>
+  <data name="Команда35" xml:space="preserve">
+    <value>Normalization</value>
+  </data>
+  <data name="Крок" xml:space="preserve">
+    <value>Step</value>
+  </data>
+  <data name="МіткаАварійнаЗупинка" xml:space="preserve">
+    <value>Emergency stop</value>
+  </data>
+  <data name="МіткаБлокировкаАварийноїЗупинки" xml:space="preserve">
+    <value>Block of emergency stop</value>
+  </data>
+  <data name="МіткаВідоміАдреси" xml:space="preserve">
+    <value>Well-known adresses</value>
+  </data>
+  <data name="МіткаПідгрузкаЗашитихПідпрограм" xml:space="preserve">
+    <value>Loading wired subroutine</value>
+  </data>
+  <data name="ПідказкаПідгрузкаЗашитихПідпрограм" xml:space="preserve">
+    <value>Press the button to change the current command to start a subroutine written in the ROM. You can press the Step button for step-by-step debugging.</value>
+  </data>
+  <data name="ПідказкаАварійнаЗупинка" xml:space="preserve">
+    <value>Enable emergency stop during overflow in arithmetic operations</value>
+  </data>
+  <data name="ПідказкаБлокировкаАварийноїЗупинки" xml:space="preserve">
+    <value>Block emergency stop during overflow in arithmetic operations</value>
+  </data>
   <data name="ПроПроект" xml:space="preserve">
     <value>About project</value>
+  </data>
+  <data name="РегістрЗакінченняЦиклу" xml:space="preserve">
+    <value>Cycle finish register</value>
+  </data>
+  <data name="РегістрЛікувальникаКоманд" xml:space="preserve">
+    <value>Command counter register</value>
+  </data>
+  <data name="РегістрЛікувальнихЦиклу" xml:space="preserve">
+    <value>Cycle counter register</value>
+  </data>
+  <data name="РегістрПовернення" xml:space="preserve">
+    <value>Return register</value>
+  </data>
+  <data name="РегістрПоточноїКоманди" xml:space="preserve">
+    <value>Current command register</value>
+  </data>
+  <data name="Регистри" xml:space="preserve">
+    <value>Registers</value>
   </data>
   <data name="СторінкаГоловна" xml:space="preserve">
     <value>Home</value>
@@ -146,5 +287,8 @@
   </data>
   <data name="СторінкаПЗП" xml:space="preserve">
     <value>ROM</value>
+  </data>
+  <data name="МіткаВивідПрінтера" xml:space="preserve">
+    <value>Printer output</value>
   </data>
 </root>

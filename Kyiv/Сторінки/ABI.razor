@@ -1,53 +1,100 @@
 ﻿@page "/abi"
+@using System.Globalization
 <h3>ABI</h3>
 
-<p>
-    Рахувальна машина "Київ" має наступні конвенції для виклику вбудованих підпрограм
-</p>
+@if (CultureInfo.CurrentUICulture.Name == "uk-UA")
+{
+    <p>
+        Рахувальна машина "Київ" має наступні конвенції для виклику вбудованих підпрограм
+    </p>
 
-<p>
-    Ячейка 2 - вхідний параметр (<code>парам</code>)
-</p>
+    <p>
+        Ячейка 2 - вхідний параметр (<code>парам</code>)
+    </p>
 
-<p>
-    Ячейка 3 - вихідний параметр із результатом (<code>рез</code>)
-</p>
+    <p>
+        Ячейка 3 - вихідний параметр із результатом (<code>рез</code>)
+    </p>
 
-<p>
-    Ячейка 4 - зберігає тимчасові значення під час роботи підпрограми, інколи використовуєтсья для вхідних параметрів (<code>тимч1</code>)
-</p>
+    <p>
+        Ячейка 4 - зберігає тимчасові значення під час роботи підпрограми, інколи використовуєтсья для вхідних параметрів (<code>тимч1</code>)
+    </p>
 
-<p>
-    Ячейка 5 - зберігає тимчасові значення під час роботи підпрограми (<code>тимч2</code>)
-</p>
+    <p>
+        Ячейка 5 - зберігає тимчасові значення під час роботи підпрограми (<code>тимч2</code>)
+    </p>
 
-<p>
-    Ячейка 6 - зберігає тимчасові значення під час роботи підпрограми (<code>тимч3</code>)
-</p>
+    <p>
+        Ячейка 6 - зберігає тимчасові значення під час роботи підпрограми (<code>тимч3</code>)
+    </p>
 
-<h3>Регістри</h3>
+    <h3>Регістри</h3>
 
-<p>
-    С - Регістр лічільник, показує адресу пам'яти із якої буде виконуватися команда.
-</p>
+    <p>
+        <code>С</code> - Регістр лічільник, показує адресу пам'яти із якої буде виконуватися команда.
+    </p>
 
-<p>
-    К - показує поточну команду, яка буде виконуватися у наступний такт.
-</p>
+    <p>
+        <code>К</code> - показує поточну команду, яка буде виконуватися у наступний такт.
+    </p>
 
-<p>
-    А - модифікатор адреси/акумулятор. Цей модіфікатор додається до усіх неявних адрес, які мають встановлений флаг `4000`
-</p>
+    <p>
+        <code>А</code> - модифікатор адреси/акумулятор. Цей модіфікатор додається до усіх неявних адрес, які мають встановлений флаг `4000`
+    </p>
 
-<p>
-    Ц - Максимальне значенні ітерацій циклу. Вихід із циклу проходить коли `Ц == А`
-</p>
+    <p>
+        <code>Ц</code> - Максимальне значенні ітерацій циклу. Вихід із циклу проходить коли `Ц == А`
+    </p>
 
-<p>
-    Р - регістр повертання. Містить адресу на яку буде повертатися код після завершення підпрограми
-</p>
+    <p>
+        <code>Р</code> - регістр повертання. Містить адресу на яку буде повертатися код після завершення підпрограми
+    </p>
+}
+else
+{
+    <p>
+        The Kyiv calculation machine has the following conventions for calling built-in subroutines:
+    </p>
 
+    <p>
+        Cell 2 - input parameter (<code>парам</code>)
+    </p>
 
-@code {
+    <p>
+        Cell 3 - output parameter with result (<code>рез</code>)
+    </p>
 
+    <p>
+        Cell 4 - stores temporary values during the subroutine execution, sometimes used for input parameters (<code>тимч1</code>)
+    </p>
+
+    <p>
+        Cell 5 - stores temporary values during the subroutine execution (<code>тимч2</code>)
+    </p>
+
+    <p>
+        Cell 6 - stores temporary values during the subroutine execution (<code>тимч3</code>)
+    </p>
+
+    <h3>Registers</h3>
+
+    <p>
+        <code>С</code> - Counter register, show memory address from which command would be executed.
+    </p>
+
+    <p>
+        <code>К</code> - Show current command which would be executed on the next tact.
+    </p>
+
+    <p>
+        <code>А</code> - address modifier/accumulator. This modifier is added to all implicit addresses that have the `4000` flag set.
+    </p>
+
+    <p>
+        <code>Ц</code> - Maximum number of loop iterations. The loop exits when `Ц == А`
+    </p>
+
+    <p>
+        <code>Р</code> - return register. Contains the address to which the code will return after the subroutine completes.
+    </p>
 }
