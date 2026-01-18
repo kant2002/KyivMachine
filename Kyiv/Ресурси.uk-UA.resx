@@ -342,8 +342,8 @@
   <data name="МіткаЛістінгПсевдоАссемблер" xml:space="preserve">
     <value>Лістінг у псевдо-асемблері</value>
   </data>
-  <data name="МіткаЯчейка" xml:space="preserve">
-    <value>Ячейка</value>
+  <data name="МіткаКомірка" xml:space="preserve">
+    <value>Комірка</value>
   </data>
   <data name="МіткаЗначення" xml:space="preserve">
     <value>Значення</value>

@@ -192,11 +192,11 @@ namespace Kyiv.Tests
         [global::Xunit.InlineDataAttribute("3075", "\'05 2525 2525 2525\'", "53", new string[0])]
         [global::Xunit.InlineDataAttribute("3076", "\'01 4760 1366 1043\'", "54", new string[0])]
         [global::Xunit.InlineDataAttribute("3077", "\'06 7455 7305 2237\'", "55", new string[0])]
-        public async global::System.Threading.Tasks.Task Постоянно_СпаянныеКонстанты(string ячейка, string код, string @__pickleIndex, string[] exampleTags)
+        public async global::System.Threading.Tasks.Task Постоянно_СпаянныеКонстанты(string комірка, string код, string @__pickleIndex, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("ячейка", ячейка);
+            argumentsOfScenario.Add("комірка", комірка);
             argumentsOfScenario.Add("код", код);
             string pickleIndex = @__pickleIndex;
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Постоянно-спаянные константы", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
@@ -213,7 +213,7 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
             {
                 await this.ScenarioStartAsync();
 #line 4
- await testRunner.ThenAsync(string.Format("ячейка {0} містить команду {1}", ячейка, код), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
+ await testRunner.ThenAsync(string.Format("комірка {0} містить команду {1}", комірка, код), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();

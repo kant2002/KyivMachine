@@ -511,6 +511,15 @@ namespace Kyiv {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cell.
+        /// </summary>
+        internal static string МіткаКомірка {
+            get {
+                return ResourceManager.GetString("МіткаКомірка", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Constants.
         /// </summary>
         internal static string МіткаКонстанти {
@@ -597,15 +606,6 @@ namespace Kyiv {
         internal static string МіткаПочатковаАдреса {
             get {
                 return ResourceManager.GetString("МіткаПочатковаАдреса", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cell.
-        /// </summary>
-        internal static string МіткаЯчейка {
-            get {
-                return ResourceManager.GetString("МіткаЯчейка", resourceCulture);
             }
         }
         

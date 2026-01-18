@@ -163,13 +163,13 @@ namespace Kyiv.Tests
   await testRunner.GivenAsync("пам\'ять заповнена значенями 1", ((string)(null)), ((global::Reqnroll.Table)(null)), "Дано ");
 #line hidden
 #line 5
-  await testRunner.AndAsync(string.Format("ячейка 5 містить команду {0}", доданок1), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+  await testRunner.AndAsync(string.Format("комірка 5 містить команду {0}", доданок1), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 6
-  await testRunner.AndAsync(string.Format("ячейка 18 містить команду {0}", доданок2), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
+  await testRunner.AndAsync(string.Format("комірка 18 містить команду {0}", доданок2), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
 #line hidden
 #line 7
-  await testRunner.AndAsync("ячейка 100 містить команду \'01 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+  await testRunner.AndAsync("комірка 100 містить команду \'01 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 8
   await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
@@ -178,7 +178,7 @@ namespace Kyiv.Tests
   await testRunner.WhenAsync("виконати команді", ((string)(null)), ((global::Reqnroll.Table)(null)), "Якщо ");
 #line hidden
 #line 10
-  await testRunner.ThenAsync(string.Format("ячейка 2 містить команду {0}", сума), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
+  await testRunner.ThenAsync(string.Format("комірка 2 містить команду {0}", сума), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
 #line hidden
 #line 11
   await testRunner.AndAsync("лічільник команд містить 101", ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
@@ -218,13 +218,13 @@ namespace Kyiv.Tests
   await testRunner.GivenAsync("пам\'ять заповнена значенями 1", ((string)(null)), ((global::Reqnroll.Table)(null)), "Дано ");
 #line hidden
 #line 20
-  await testRunner.AndAsync(string.Format("ячейка 5 містить команду {0}", зменшуване), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+  await testRunner.AndAsync(string.Format("комірка 5 містить команду {0}", зменшуване), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 21
-  await testRunner.AndAsync(string.Format("ячейка 18 містить команду {0}", відємник), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
+  await testRunner.AndAsync(string.Format("комірка 18 містить команду {0}", відємник), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
 #line hidden
 #line 22
-  await testRunner.AndAsync("ячейка 100 містить команду \'02 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+  await testRunner.AndAsync("комірка 100 містить команду \'02 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 23
   await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
@@ -233,7 +233,7 @@ namespace Kyiv.Tests
   await testRunner.WhenAsync("виконати команді", ((string)(null)), ((global::Reqnroll.Table)(null)), "Якщо ");
 #line hidden
 #line 25
-  await testRunner.ThenAsync(string.Format("ячейка 2 містить команду {0}", різниця), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
+  await testRunner.ThenAsync(string.Format("комірка 2 містить команду {0}", різниця), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
 #line hidden
 #line 26
   await testRunner.AndAsync("лічільник команд містить 101", ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
@@ -274,13 +274,13 @@ namespace Kyiv.Tests
   await testRunner.GivenAsync("пам\'ять заповнена значенями 1", ((string)(null)), ((global::Reqnroll.Table)(null)), "Дано ");
 #line hidden
 #line 36
-  await testRunner.AndAsync(string.Format("ячейка 5 містить команду {0}", зменшуване), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+  await testRunner.AndAsync(string.Format("комірка 5 містить команду {0}", зменшуване), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 37
-  await testRunner.AndAsync(string.Format("ячейка 18 містить команду {0}", відємник), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
+  await testRunner.AndAsync(string.Format("комірка 18 містить команду {0}", відємник), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
 #line hidden
 #line 38
-  await testRunner.AndAsync("ячейка 100 містить команду \'06 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+  await testRunner.AndAsync("комірка 100 містить команду \'06 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 39
   await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
@@ -289,7 +289,7 @@ namespace Kyiv.Tests
   await testRunner.WhenAsync("виконати команді", ((string)(null)), ((global::Reqnroll.Table)(null)), "Якщо ");
 #line hidden
 #line 41
-  await testRunner.ThenAsync(string.Format("ячейка 2 містить команду {0}", різниця), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
+  await testRunner.ThenAsync(string.Format("комірка 2 містить команду {0}", різниця), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
 #line hidden
 #line 42
   await testRunner.AndAsync("лічільник команд містить 101", ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
@@ -331,13 +331,13 @@ namespace Kyiv.Tests
   await testRunner.GivenAsync("пам\'ять заповнена значенями 1", ((string)(null)), ((global::Reqnroll.Table)(null)), "Дано ");
 #line hidden
 #line 53
-  await testRunner.AndAsync(string.Format("ячейка 5 містить команду {0}", множник1), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+  await testRunner.AndAsync(string.Format("комірка 5 містить команду {0}", множник1), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 54
-  await testRunner.AndAsync(string.Format("ячейка 18 містить команду {0}", множник2), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
+  await testRunner.AndAsync(string.Format("коміркакомірка 18 містить команду {0}", множник2), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
 #line hidden
 #line 55
-  await testRunner.AndAsync("ячейка 100 містить команду \'10 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+  await testRunner.AndAsync("комірка 100 містить команду \'10 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 56
   await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
@@ -346,7 +346,7 @@ namespace Kyiv.Tests
   await testRunner.WhenAsync("виконати команді", ((string)(null)), ((global::Reqnroll.Table)(null)), "Якщо ");
 #line hidden
 #line 58
-  await testRunner.ThenAsync(string.Format("ячейка 2 містить команду {0}", добуток), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
+  await testRunner.ThenAsync(string.Format("комірка 2 містить команду {0}", добуток), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
 #line hidden
 #line 59
   await testRunner.AndAsync("лічільник команд містить 101", ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
@@ -387,13 +387,13 @@ namespace Kyiv.Tests
   await testRunner.GivenAsync("пам\'ять заповнена значенями 1", ((string)(null)), ((global::Reqnroll.Table)(null)), "Дано ");
 #line hidden
 #line 72
-  await testRunner.AndAsync(string.Format("ячейка 5 містить команду {0}", множник1), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+  await testRunner.AndAsync(string.Format("комірка 5 містить команду {0}", множник1), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 73
-  await testRunner.AndAsync(string.Format("ячейка 18 містить команду {0}", множник2), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
+  await testRunner.AndAsync(string.Format("комірка 18 містить команду {0}", множник2), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
 #line hidden
 #line 74
-  await testRunner.AndAsync("ячейка 100 містить команду \'11 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+  await testRunner.AndAsync("комірка 100 містить команду \'11 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 75
   await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
@@ -402,7 +402,7 @@ namespace Kyiv.Tests
   await testRunner.WhenAsync("виконати команді", ((string)(null)), ((global::Reqnroll.Table)(null)), "Якщо ");
 #line hidden
 #line 77
-  await testRunner.ThenAsync(string.Format("ячейка 2 містить команду {0}", добуток), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
+  await testRunner.ThenAsync(string.Format("комірка 2 містить команду {0}", добуток), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
 #line hidden
 #line 78
   await testRunner.AndAsync("лічільник команд містить 101", ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
@@ -442,13 +442,13 @@ namespace Kyiv.Tests
   await testRunner.GivenAsync("пам\'ять заповнена значенями 1", ((string)(null)), ((global::Reqnroll.Table)(null)), "Дано ");
 #line hidden
 #line 91
-  await testRunner.AndAsync(string.Format("ячейка 5 містить команду {0}", ділене), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+  await testRunner.AndAsync(string.Format("комірка 5 містить команду {0}", ділене), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 92
-  await testRunner.AndAsync(string.Format("ячейка 18 містить команду {0}", дільник), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
+  await testRunner.AndAsync(string.Format("комірка 18 містить команду {0}", дільник), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
 #line hidden
 #line 93
-  await testRunner.AndAsync("ячейка 100 містить команду \'12 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+  await testRunner.AndAsync("комірка 100 містить команду \'12 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 94
   await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
@@ -457,7 +457,7 @@ namespace Kyiv.Tests
   await testRunner.WhenAsync("виконати команді", ((string)(null)), ((global::Reqnroll.Table)(null)), "Якщо ");
 #line hidden
 #line 96
-  await testRunner.ThenAsync(string.Format("ячейка 2 містить команду {0}", частка), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
+  await testRunner.ThenAsync(string.Format("комірка 2 містить команду {0}", частка), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
 #line hidden
 #line 97
   await testRunner.AndAsync("лічільник команд містить 101", ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
@@ -496,13 +496,13 @@ namespace Kyiv.Tests
   await testRunner.GivenAsync("пам\'ять заповнена значенями 1", ((string)(null)), ((global::Reqnroll.Table)(null)), "Дано ");
 #line hidden
 #line 107
-  await testRunner.AndAsync(string.Format("ячейка 5 містить команду {0}", ділене), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+  await testRunner.AndAsync(string.Format("комірка 5 містить команду {0}", ділене), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 108
-  await testRunner.AndAsync(string.Format("ячейка 18 містить команду {0}", дільник), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
+  await testRunner.AndAsync(string.Format("комірка 18 містить команду {0}", дільник), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
 #line hidden
 #line 109
-  await testRunner.AndAsync("ячейка 100 містить команду \'03 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+  await testRunner.AndAsync("комірка 100 містить команду \'03 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 110
   await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
@@ -511,7 +511,7 @@ namespace Kyiv.Tests
   await testRunner.WhenAsync("виконати команді", ((string)(null)), ((global::Reqnroll.Table)(null)), "Якщо ");
 #line hidden
 #line 112
-  await testRunner.ThenAsync(string.Format("ячейка 2 містить команду {0}", частка), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
+  await testRunner.ThenAsync(string.Format("комірка 2 містить команду {0}", частка), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
 #line hidden
 #line 113
   await testRunner.AndAsync("лічільник команд містить 101", ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
@@ -549,13 +549,13 @@ namespace Kyiv.Tests
   await testRunner.GivenAsync("пам\'ять заповнена значенями 1", ((string)(null)), ((global::Reqnroll.Table)(null)), "Дано ");
 #line hidden
 #line 122
-  await testRunner.AndAsync(string.Format("ячейка 5 містить команду {0}", ділене), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+  await testRunner.AndAsync(string.Format("комірка 5 містить команду {0}", ділене), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 123
-  await testRunner.AndAsync(string.Format("ячейка 18 містить команду {0}", дільник), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
+  await testRunner.AndAsync(string.Format("комірка 18 містить команду {0}", дільник), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
 #line hidden
 #line 124
-  await testRunner.AndAsync("ячейка 100 містить команду \'07 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+  await testRunner.AndAsync("комірка 100 містить команду \'07 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 125
   await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
@@ -564,7 +564,7 @@ namespace Kyiv.Tests
   await testRunner.WhenAsync("виконати команді", ((string)(null)), ((global::Reqnroll.Table)(null)), "Якщо ");
 #line hidden
 #line 127
-  await testRunner.ThenAsync(string.Format("ячейка 2 містить команду {0}", частка), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
+  await testRunner.ThenAsync(string.Format("комірка 2 містить команду {0}", частка), ((string)(null)), ((global::Reqnroll.Table)(null)), "Тоді ");
 #line hidden
 #line 128
   await testRunner.AndAsync("лічільник команд містить 101", ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");

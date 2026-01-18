@@ -342,7 +342,7 @@
   <data name="МіткаЛістінгПсевдоАссемблер" xml:space="preserve">
     <value>Listing in pseudo-assembler</value>
   </data>
-  <data name="МіткаЯчейка" xml:space="preserve">
+  <data name="МіткаКомірка" xml:space="preserve">
     <value>Cell</value>
   </data>
   <data name="МіткаЗначення" xml:space="preserve">

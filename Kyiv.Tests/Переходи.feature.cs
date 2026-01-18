@@ -165,13 +165,13 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
  await testRunner.GivenAsync("пам\'ять заповнена значенями 1", ((string)(null)), ((global::Reqnroll.Table)(null)), "Дано ");
 #line hidden
 #line 5
- await testRunner.AndAsync(string.Format("ячейка 5 містить команду {0}", значення1), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+ await testRunner.AndAsync(string.Format("комірка 5 містить команду {0}", значення1), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 6
- await testRunner.AndAsync(string.Format("ячейка 18 містить команду {0}", значення2), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
+ await testRunner.AndAsync(string.Format("комірка 18 містить команду {0}", значення2), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
 #line hidden
 #line 7
- await testRunner.AndAsync("ячейка 100 містить команду \'05 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+ await testRunner.AndAsync("комірка 100 містить команду \'05 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 8
  await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
@@ -214,10 +214,10 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
  await testRunner.AndAsync("регістр повернення містить 18", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 22
- await testRunner.AndAsync("ячейка 18 містить команду \'05 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
+ await testRunner.AndAsync("комірка 18 містить команду \'05 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
 #line hidden
 #line 23
- await testRunner.AndAsync("ячейка 100 містить команду \'32 0000 0000 0000\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+ await testRunner.AndAsync("комірка 100 містить команду \'32 0000 0000 0000\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 24
  await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
@@ -265,10 +265,10 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
  await testRunner.GivenAsync("пам\'ять заповнена значенями 1", ((string)(null)), ((global::Reqnroll.Table)(null)), "Дано ");
 #line hidden
 #line 31
- await testRunner.AndAsync("ячейка 2 містить команду \'32 0015 0012 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
+ await testRunner.AndAsync("комірка 2 містить команду \'32 0015 0012 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
 #line hidden
 #line 32
- await testRunner.AndAsync(string.Format("ячейка 100 містить команду {0}", значення1), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+ await testRunner.AndAsync(string.Format("комірка 100 містить команду {0}", значення1), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 33
  await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
@@ -326,7 +326,7 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
  await testRunner.AndAsync("регістр модифікації адрес містить 5", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 48
- await testRunner.AndAsync(string.Format("ячейка 100 містить команду {0}", значення1), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
+ await testRunner.AndAsync(string.Format("комірка 100 містить команду {0}", значення1), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 49
  await testRunner.AndAsync("регістр лічільник команд містить 100", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
