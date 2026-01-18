@@ -1,16 +1,27 @@
 ﻿@page "/constants"
-<h3>Константи</h3>
+@using System.Globalization
 
-<p>
-    Рахувальна машина "Київ" має наступні константи у простійній пам'яті
-</p>
+<НазваСторінки>@Ресурси.СторінкаКонстанти</НазваСторінки>
+<h3>@Ресурси.СторінкаКонстанти</h3>
 
+@if (CultureInfo.CurrentUICulture.Name == "uk-UA")
+{
+    <p>
+        Рахувальна машина "Київ" має наступні константи у постійній пам'яті
+    </p>
+}
+else
+{
+    <p>
+        The "Kyiv" calculation machine has the following constants in permanent memory:
+    </p>    
+}
 <table class="table table-sm">
     <thead>
         <tr>
-            <td>Ячейка</td>
-            <td>Значення</td>
-            <td>Мнемоніка</td>
+            <td>@Ресурси.МіткаЯчейка</td>
+            <td>@Ресурси.МіткаЗначення</td>
+            <td>@Ресурси.МіткаМнемоніка</td>
         </tr>
     </thead>
     <tbody>
@@ -231,7 +242,3 @@
         </tr>
     </tbody>
 </table>
-
-@code {
-
-}

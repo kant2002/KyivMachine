@@ -115,6 +115,24 @@ namespace Kyiv {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Random access memory.
+        /// </summary>
+        internal static string ЗаголовокСторінкиОЗП {
+            get {
+                return ResourceManager.GetString("ЗаголовокСторінкиОЗП", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Passive storage device.
+        /// </summary>
+        internal static string ЗаголовокСторінкиПЗП {
+            get {
+                return ResourceManager.GetString("ЗаголовокСторінкиПЗП", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Load.
         /// </summary>
         internal static string КнопкаЗавантажити {
@@ -457,6 +475,24 @@ namespace Kyiv {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Changeable soldered memory (CSM).
+        /// </summary>
+        internal static string МіткаЗмінноСпаяннаПамять {
+            get {
+                return ResourceManager.GetString("МіткаЗмінноСпаяннаПамять", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value.
+        /// </summary>
+        internal static string МіткаЗначення {
+            get {
+                return ResourceManager.GetString("МіткаЗначення", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Words count.
         /// </summary>
         internal static string МіткаКількістьСлів {
@@ -475,11 +511,47 @@ namespace Kyiv {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Constants.
+        /// </summary>
+        internal static string МіткаКонстанти {
+            get {
+                return ResourceManager.GetString("МіткаКонстанти", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Listing in pseudo-assembler.
+        /// </summary>
+        internal static string МіткаЛістінгПсевдоАссемблер {
+            get {
+                return ResourceManager.GetString("МіткаЛістінгПсевдоАссемблер", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Listing in pseudo-C.
         /// </summary>
         internal static string МіткаЛістінгС {
             get {
                 return ResourceManager.GetString("МіткаЛістінгС", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mnemonic.
+        /// </summary>
+        internal static string МіткаМнемоніка {
+            get {
+                return ResourceManager.GetString("МіткаМнемоніка", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dialing codes.
+        /// </summary>
+        internal static string МіткаНабірніКоди {
+            get {
+                return ResourceManager.GetString("МіткаНабірніКоди", resourceCulture);
             }
         }
         
@@ -511,11 +583,29 @@ namespace Kyiv {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Permanently soldered memory (PSM).
+        /// </summary>
+        internal static string МіткаПостійноСпаянаПамять {
+            get {
+                return ResourceManager.GetString("МіткаПостійноСпаянаПамять", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Starting address.
         /// </summary>
         internal static string МіткаПочатковаАдреса {
             get {
                 return ResourceManager.GetString("МіткаПочатковаАдреса", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cell.
+        /// </summary>
+        internal static string МіткаЯчейка {
+            get {
+                return ResourceManager.GetString("МіткаЯчейка", resourceCulture);
             }
         }
         
@@ -592,11 +682,38 @@ namespace Kyiv {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to About ECM.
+        /// </summary>
+        internal static string ПроЕОМ {
+            get {
+                return ResourceManager.GetString("ПроЕОМ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About me.
+        /// </summary>
+        internal static string ПроМене {
+            get {
+                return ResourceManager.GetString("ПроМене", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to About project.
         /// </summary>
         internal static string ПроПроект {
             get {
                 return ResourceManager.GetString("ПроПроект", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About ECM developer.
+        /// </summary>
+        internal static string ПроРозробникаЕОМ {
+            get {
+                return ResourceManager.GetString("ПроРозробникаЕОМ", resourceCulture);
             }
         }
         
