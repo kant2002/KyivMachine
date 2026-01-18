@@ -352,16 +352,16 @@
     <value>Мнемоніка</value>
   </data>
   <data name="ЗаголовокСторінкиОЗП" xml:space="preserve">
-    <value>Оперативний запапам'ятовуючий пристрій</value>
+    <value>Оперативний запам'ятовуючий пристрій</value>
   </data>
   <data name="ЗаголовокСторінкиПЗП" xml:space="preserve">
-    <value>Пассивний запапам'ятовуючий пристрій</value>
+    <value>Пассивний запам'ятовуючий пристрій</value>
   </data>
   <data name="МіткаКонстанти" xml:space="preserve">
     <value>Константи</value>
   </data>
   <data name="МіткаПостійноСпаянаПамять" xml:space="preserve">
-    <value>Постійно-спаяна пам'ять</value>
+    <value>Постійно-спаяна пам'ять (ПСП)</value>
   </data>
   <data name="МіткаЗмінноСпаяннаПамять" xml:space="preserve">
     <value>Змінно-спаянна пам'ять (ЗСП)</value>
