@@ -3,7 +3,6 @@ using Мікрософт.АспНетЯдро.Компоненти.Веб;
 using Мікрософт.АспНетЯдро.Компоненти.ВебАсемблі.Хостінг;
 using System.Globalization;
 using Microsoft.JSInterop;
-using Microsoft.Extensions.DependencyInjection;
 
 var будівник = БудівникХостаВебАсемблі.СтворитиЗаЗамовчанням(args);
 будівник.КорневіКомпоненти.Add<Апка>("#app");

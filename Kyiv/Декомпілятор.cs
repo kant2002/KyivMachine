@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Система.Лінкью;
+﻿using Система.Лінкью;
 using static Kyiv.Конвертер;
 
 namespace Kyiv;

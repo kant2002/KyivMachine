@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-using System.Reflection.PortableExecutable;
 using static Kyiv.Конвертер;
 
 namespace Kyiv;
