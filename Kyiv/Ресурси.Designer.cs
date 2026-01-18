@@ -556,7 +556,7 @@ namespace Kyiv {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dialing codes.
+        ///   Looks up a localized string similar to Keyed codes.
         /// </summary>
         internal static string МіткаНабірніКоди {
             get {
