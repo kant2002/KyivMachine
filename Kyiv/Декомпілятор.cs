@@ -410,8 +410,8 @@ public class Декомпілятор
             case НевідомаОперація:
                 return операція;
             default:
-                throw new NotSupportedException();
-        };
+                throw new NotSupportedException($"Операція {операція} не підтримується");
+        }
     }
 
     private static IEnumerable<Операція> ДоАссемблера(СтруктураКоманди команда, bool html)
@@ -561,7 +561,7 @@ public class Декомпілятор
                     new АдресаПамяти(new Регістр(ТипРегістра.А)));
                 break;
             default:
-                throw new NotSupportedException();
+                throw new NotSupportedException($"Операція {команда.Код} не підтримується");
         }
     }
 
