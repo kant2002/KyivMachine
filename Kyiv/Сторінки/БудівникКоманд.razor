@@ -46,7 +46,7 @@ else
     </p>
 }
 
-<div class="row">
+<div class="row g-2 align-items-center">
     <div class="col-12 col-md-3">
         <InputSelect class="form-select" @bind-Value="Код">
             <option checked="@(Код == "00")"
@@ -171,17 +171,32 @@ else
             </option>
         </InputSelect>
     </div>
-    <div class="col col-md-1">
+    <div class="col col-md-auto">
+        A I
+    </div>
+    <div class="col col-md-auto">
         <InputCheckbox class="form-check-input" @bind-Value="НепрямаАдресаціяАдреса1" title="@Ресурси.ВключаєНеявнуАдресацію" />
-        <ВвідРегістра @bind-Value="@Адреса1" style="width: 70px" />
     </div>
-    <div class="col col-md-1">
+    <div class="col col-md-auto">
+        <ВвідРегістра @bind-Value="@Адреса1" class="form-control адрес-ячейки" />
+    </div>
+    <div class="col col-md-auto">
+        A II
+    </div>
+    <div class="col col-md-auto">
         <InputCheckbox class="form-check-input" @bind-Value="НепрямаАдресаціяАдреса2" title="@Ресурси.ВключаєНеявнуАдресацію" />
-        <ВвідРегістра @bind-Value="@Адреса2" style="width: 70px" />
     </div>
-    <div class="col col-md-1">
+    <div class="col col-md-auto">
+        <ВвідРегістра @bind-Value="@Адреса2" class="form-control адрес-ячейки" />
+    </div>
+    <div class="col col-md-auto">
+        A III
+    </div>
+    <div class="col col-md-auto">
         <InputCheckbox class="form-check-input" @bind-Value="НепрямаАдресаціяАдреса3" title="@Ресурси.ВключаєНеявнуАдресацію" />
-        <ВвідРегістра @bind-Value="@Адреса3" style="width: 70px" />
+    </div>
+    <div class="col col-md-auto">
+        <ВвідРегістра @bind-Value="@Адреса3" class="form-control адрес-ячейки" />
     </div>
 </div>
 <label>@Ресурси.Команда</label>

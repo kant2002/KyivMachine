@@ -112,3 +112,9 @@ code {
     background-size: cover;
 }
 
+input.адрес-ячейки {
+    width: 50px;
+}
+input.form-control.адрес-ячейки {
+    width: 65px;
+}

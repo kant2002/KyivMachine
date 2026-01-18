@@ -30,7 +30,7 @@
         <label>
             @Ресурси.ПідказкаПідпрограми
         </label>
-        <InputSelect @bind-Value="Варіант">
+        <InputSelect @bind-Value="Варіант" class="form-control">
             <option value="">
                 @Ресурси.ВаріантРучніАдреси
             </option>
@@ -117,7 +117,7 @@
                 "Improved Gaussian method",
             ];
         }
-        <InputSelect @bind-Value="ВаріантПідпрограм">
+        <InputSelect @bind-Value="ВаріантПідпрограм" class="form-control">
             <option value="">
                 @Ресурси.ВаріантВиберітьПідпрограмму
             </option>
@@ -133,11 +133,11 @@
         </InputSelect>
         <label>
             @Ресурси.МіткаПочатковаАдреса <small>(@Ресурси.ПідказкаПочатковаАдреса)</small>
-            <InputNumber @bind-Value="ПочатковаАдреса" size="4" />
+            <InputNumber @bind-Value="ПочатковаАдреса" size="4" class="form-control" />
         </label>
         <label>
             @Ресурси.МіткаКількістьСлів
-            <InputNumber @bind-Value="КількістьСлів" size="4" />
+            <InputNumber @bind-Value="КількістьСлів" size="4" class="form-control" />
         </label>
 
         <button type="button" title="@Ресурси.ПідказкаЗавантажити" class="btn btn-primary" @onclick=Завантажити>

@@ -11,15 +11,32 @@
 </NavLink>
 
 <h3>@Ресурси.Регистри</h3>
-<label title="@Ресурси.РегістрЛікувальникаКоманд">C</label>
-<ВвідРегістра @bind-Value="@Machine.РегістрС" />
-<label title="@Ресурси.РегістрПовернення">Р</label>
-@Machine.РегістрР
-<label title="@Ресурси.РегістрЗакінченняЦиклу">Ц</label>
-@Machine.РегістрЦ
-<label title="@Ресурси.РегістрЛікувальнихЦиклу">А</label>
-<ВвідРегістра @bind-Value="@Machine.РегістрА" />
-
+<div class="row row-cols-lg-auto g-3 align-items-center">
+    <div class="col-auto">
+        <label title="@Ресурси.РегістрЛікувальникаКоманд">C</label>
+    </div>
+    <div class="col-auto">
+        <ВвідРегістра @bind-Value="@Machine.РегістрС" class="form-control адрес-ячейки" />
+    </div>
+    <div class="col-auto">
+        <label title="@Ресурси.РегістрПовернення">Р</label>
+    </div>
+    <div class="col-auto" title="@Ресурси.РегістрПовернення">
+        @Machine.РегістрР
+    </div>
+    <div class="col-auto">
+        <label title="@Ресурси.РегістрЗакінченняЦиклу">Ц</label>
+    </div>
+    <div class="col-auto" title="@Ресурси.РегістрЗакінченняЦиклу">
+        @Machine.РегістрЦ
+    </div>
+    <div class="col-auto">
+        <label title="@Ресурси.РегістрЛікувальнихЦиклу">А</label>
+    </div>
+    <div class="col-auto">
+        <ВвідРегістра @bind-Value="@Machine.РегістрА" class="form-control адрес-ячейки" />
+    </div>
+</div>
 <div class="row">
     <div class="col">
         <label title="@Ресурси.РегістрПоточноїКоманди">К</label>
@@ -34,7 +51,7 @@
 
 <div class="form-check">
     <InputCheckbox @bind-Value="Machine.АварійнаЗупинка" id="АварійнаЗупинка" />
-    <label class="form-check-label" for="АварійнаЗупинка" 
+    <label class="form-check-label" for="АварійнаЗупинка"
            title="@Ресурси.ПідказкаАварійнаЗупинка">
         @Ресурси.МіткаАварійнаЗупинка
     </label>
@@ -109,16 +126,38 @@
 
 <h3>@Ресурси.МіткаПідгрузкаЗашитихПідпрограм</h3>
 <p>@Ресурси.ПідказкаПідгрузкаЗашитихПідпрограм</p>
-<button type="button" class="btn btn-secondary" @onclick=ПротестуватиКорінь>sqrt(x)</button>
-<button type="button" class="btn btn-secondary" @onclick=ПротестуватиКонвертацію>2 до 10</button>
-<button type="button" class="btn btn-secondary" @onclick=ПротестуватиЕкспоненту>1/4 * e(x)</button>
-<button type="button" class="btn btn-secondary" @onclick=ПротестуватиСінусВ1>1/2 * sinX (-1 &lt;x &lt; 1)</button>
-<button type="button" class="btn btn-secondary" @onclick=ПротестуватиКосінусВ1>1/2 * cosX (-1 &lt;x &lt; 1)</button>
-<button type="button" class="btn btn-secondary" @onclick=ПротестуватиНатуральнийЛогарфім>ln(x)</button>
-<button type="button" class="btn btn-secondary" @onclick=ПротестуватиСінусВ2>1/2 * sinX (-2π &lt;x &lt; 2π)</button>
-<button type="button" class="btn btn-secondary" @onclick=ПротестуватиКосінусВ2>1/2 * cosX (-2π &lt;x &lt; 2π)</button>
-<button type="button" class="btn btn-secondary" @onclick=ПротестуватиАркСінус>1/π * arcsin(X) (-1 &lt;x &lt; 1)</button>
-<button type="button" class="btn btn-secondary" @onclick=ПротестуватиАркКосінус>1/π * arccos(X) (-1 &lt;x &lt; 1)</button>
+<div class="row g-1">
+    <div class="col-auto">
+        <button type="button" class="btn btn-secondary" @onclick=ПротестуватиКорінь>sqrt(x)</button>
+    </div>
+    <div class="col-auto">
+        <button type="button" class="btn btn-secondary" @onclick=ПротестуватиКонвертацію>2 до 10</button>
+    </div>
+    <div class="col-auto">
+        <button type="button" class="btn btn-secondary" @onclick=ПротестуватиЕкспоненту>1/4 * e(x)</button>
+    </div>
+    <div class="col-auto">
+        <button type="button" class="btn btn-secondary" @onclick=ПротестуватиСінусВ1>1/2 * sinX (-1 &lt;x &lt; 1)</button>
+    </div>
+    <div class="col-auto">
+        <button type="button" class="btn btn-secondary" @onclick=ПротестуватиКосінусВ1>1/2 * cosX (-1 &lt;x &lt; 1)</button>
+    </div>
+    <div class="col-auto">
+        <button type="button" class="btn btn-secondary" @onclick=ПротестуватиНатуральнийЛогарфім>ln(x)</button>
+    </div>
+    <div class="col-auto">
+        <button type="button" class="btn btn-secondary" @onclick=ПротестуватиСінусВ2>1/2 * sinX (-2π &lt;x &lt; 2π)</button>
+    </div>
+    <div class="col-auto">
+        <button type="button" class="btn btn-secondary" @onclick=ПротестуватиКосінусВ2>1/2 * cosX (-2π &lt;x &lt; 2π)</button>
+    </div>
+    <div class="col-auto">
+        <button type="button" class="btn btn-secondary" @onclick=ПротестуватиАркСінус>1/π * arcsin(X) (-1 &lt;x &lt; 1)</button>
+    </div>
+    <div class="col-auto">
+        <button type="button" class="btn btn-secondary" @onclick=ПротестуватиАркКосінус>1/π * arccos(X) (-1 &lt;x &lt; 1)</button>
+    </div>
+</div>
 
 <h3>@Ресурси.МіткаВивідПрінтера</h3>
 <pre>
