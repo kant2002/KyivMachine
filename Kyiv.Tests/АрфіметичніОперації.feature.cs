@@ -334,7 +334,7 @@ namespace Kyiv.Tests
   await testRunner.AndAsync(string.Format("комірка 5 містить команду {0}", множник1), ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
 #line hidden
 #line 54
-  await testRunner.AndAsync(string.Format("коміркакомірка 18 містить команду {0}", множник2), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
+  await testRunner.AndAsync(string.Format("комірка 18 містить команду {0}", множник2), ((string)(null)), ((global::Reqnroll.Table)(null)), "А також ");
 #line hidden
 #line 55
   await testRunner.AndAsync("комірка 100 містить команду \'10 0005 0022 0002\'", ((string)(null)), ((global::Reqnroll.Table)(null)), "І ");
